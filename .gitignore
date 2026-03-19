@@ -1,0 +1,16 @@
+.env
+data/*.db
+data/*.db-journal
+data/*.db-wal
+data/*.db-shm
+node_modules/
+.next/
+dashboard/out/
+dashboard/.next/
+*.exe
+*.dll
+*.so
+*.dylib
+radar
+__debug_bin*
+.DS_Store

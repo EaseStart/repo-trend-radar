@@ -1,0 +1,69 @@
+name: Daily Scan & Deploy
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # 6:00 UTC daily
+  workflow_dispatch:       # Manual trigger
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+env:
+  GITHUB_TOKEN: ${{ secrets.RADAR_GITHUB_TOKEN }}
+  RADAR_DB_PATH: ./data/radar.db
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.23'
+
+      - name: Build crawler
+        run: cd crawler && go build -o ../radar ./cmd/radar
+
+      - name: Run full scan
+        run: ./radar scan
+
+      - name: Commit data changes
+        run: |
+          git config user.name "radar-bot"
+          git config user.email "radar@easestart.dev"
+          git add dashboard/public/data/ data/
+          git diff --cached --quiet || git commit -m "chore(data): daily scan $(date +%Y-%m-%d)"
+          git push
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: dashboard/package-lock.json
+
+      - name: Build dashboard
+        run: |
+          cd dashboard
+          npm ci
+          npm run build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dashboard/out
+
+  deploy:
+    needs: scan
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
