@@ -11,6 +11,6 @@ dashboard/.next/
 *.dll
 *.so
 *.dylib
-radar
+/radar
 __debug_bin*
 .DS_Store
