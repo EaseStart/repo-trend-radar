@@ -1,146 +1,204 @@
 {
-  "generatedAt": "2026-03-20T02:33:30.891Z",
-  "hasPreviousData": false,
-  "narrative": "Tracked 1365 repos. \"llm\" leads with 295 rising repos.",
+  "generatedAt": "2026-03-20T14:40:00.215Z",
+  "hasPreviousData": true,
+  "narrative": "Tracked 1370 repos. 5 new discoveries. 3 zone upgrades. Top mover gained +1113 stars. \"llm\" leads with 217 rising repos.",
   "overview": {
-    "totalTracked": 1365,
-    "prevTracked": null,
-    "newCount": 10,
-    "zoneChangeCount": 0,
-    "topMoverCount": 0,
-    "breakoutCount": 4,
-    "risingCount": 1130,
-    "seedlingCount": 231,
-    "scanAt": "2026-03-20 00:21:55"
+    "totalTracked": 1370,
+    "prevTracked": 1365,
+    "newCount": 5,
+    "zoneChangeCount": 3,
+    "topMoverCount": 306,
+    "breakoutCount": 0,
+    "risingCount": 442,
+    "seedlingCount": 17,
+    "scanAt": "2026-03-20 14:39:53"
   },
   "newDiscoveries": [
     {
-      "fullName": "electric-sql/electric",
-      "description": "Read-path sync engine for Postgres that handles partial replication, data delivery and fan-out.",
-      "language": "Elixir",
-      "stars": 9999,
-      "zone": "rising"
-    },
-    {
-      "fullName": "Netflix/metaflow",
-      "description": "Build, Manage and Deploy AI/ML Systems",
+      "fullName": "AgentOps-AI/agentops",
+      "description": "Python SDK for AI agent monitoring, LLM cost tracking, benchmarking, and more. Integrates with most LLMs and agent frameworks including CrewAI, Agno, OpenAI Agents SDK, Langchain, Autogen, AG2, and CamelAI",
       "language": "Python",
-      "stars": 9958,
+      "stars": 5387,
       "zone": "rising"
     },
     {
-      "fullName": "humanlayer/humanlayer",
-      "description": "The best way to get AI coding agents to solve hard problems in complex codebases.",
-      "language": "TypeScript",
-      "stars": 9932,
-      "zone": "rising"
-    },
-    {
-      "fullName": "unoplatform/uno",
-      "description": "Open-source platform for building cross-platform native Mobile, Web, Desktop and Embedded apps quickly.  Create rich, C#/XAML, single-codebase apps from any IDE. Hot Reload included! 90m+ NuGet Downloads!!",
-      "language": "C#",
-      "stars": 9866,
-      "zone": "rising"
-    },
-    {
-      "fullName": "liyupi/ai-guide",
-      "description": "程序员鱼皮的 AI 资源大全 + Vibe Coding 零基础教程，分享大模型选择指南（DeepSeek / GPT / Gemini / Claude）、最新 AI 资讯、Prompt 提示词大全、AI 知识百科（RAG / MCP / A2A）、AI 编程教程、AI 工具用法（Cursor / Claude Code / OpenClaw / TRAE / Lovable / Agent Skills）、AI 开发框架教程（Spring AI / LangChain）、AI 产品变现指南，帮你快速掌握 AI 技术，走在时代前沿。本项目为开源文档版本，已升级为鱼皮 AI 导航网站",
-      "language": "JavaScript",
-      "stars": 9860,
-      "zone": "rising"
-    },
-    {
-      "fullName": "sigoden/dufs",
-      "description": "A file server that supports static serving, uploading, searching, accessing control, webdav...",
+      "fullName": "antinomyhq/forgecode",
+      "description": "AI enabled pair programmer for Claude, GPT, O Series, Grok, Deepseek, Gemini and 300+ models",
       "language": "Rust",
-      "stars": 9837,
+      "stars": 5018,
       "zone": "rising"
     },
     {
-      "fullName": "saturndec/waoowaoo",
-      "description": "首家工业级全流程 AI 影视生产平台。Industry-first professional AI Agent platform for controllable film & video production. From shorts to live-action with Hollywood-standard workflows.",
+      "fullName": "rag-web-ui/rag-web-ui",
+      "description": "RAG Web UI is an intelligent dialogue system based on RAG (Retrieval-Augmented Generation) technology.",
       "language": "TypeScript",
-      "stars": 9797,
+      "stars": 2828,
       "zone": "rising"
     },
     {
-      "fullName": "ValueCell-ai/valuecell",
-      "description": "ValueCell is a community-driven, multi-agent platform for financial applications.",
+      "fullName": "doobidoo/mcp-memory-service",
+      "description": "Open-source persistent memory for AI agent pipelines (LangGraph, CrewAI, AutoGen) and Claude. REST API + knowledge graph + autonomous consolidation.",
       "language": "Python",
-      "stars": 9682,
+      "stars": 1518,
       "zone": "rising"
     },
     {
-      "fullName": "sigoden/aichat",
-      "description": "All-in-one LLM CLI tool featuring Shell Assistant, Chat-REPL, RAG, AI Tools & Agents, with access to OpenAI, Claude, Gemini, Ollama, Groq, and more.",
-      "language": "Rust",
-      "stars": 9575,
-      "zone": "rising"
-    },
-    {
-      "fullName": "bottlerocket-os/bottlerocket",
-      "description": "An operating system designed for hosting containers",
-      "language": "Rust",
-      "stars": 9555,
+      "fullName": "ArtificialAnalysis/Stirrup",
+      "description": "The lightweight framework for building agents",
+      "language": "Python",
+      "stars": 329,
       "zone": "rising"
     }
   ],
-  "zoneChanges": [],
-  "topMovers": [],
+  "zoneChanges": [
+    {
+      "fullName": "opendataloader-project/opendataloader-pdf",
+      "from": "breakout",
+      "to": "rising",
+      "stars": 6681,
+      "prevStars": 5568
+    },
+    {
+      "fullName": "EvoScientist/EvoScientist",
+      "from": "breakout",
+      "to": "rising",
+      "stars": 1289,
+      "prevStars": 1163
+    },
+    {
+      "fullName": "MiniMax-AI/OpenRoom",
+      "from": "breakout",
+      "to": "rising",
+      "stars": 522,
+      "prevStars": 472
+    }
+  ],
+  "topMovers": [
+    {
+      "fullName": "opendataloader-project/opendataloader-pdf",
+      "starGain": 1113,
+      "stars": 6681,
+      "zone": "rising",
+      "language": "Java"
+    },
+    {
+      "fullName": "langchain-ai/open-swe",
+      "starGain": 423,
+      "stars": 7439,
+      "zone": "rising",
+      "language": "Python"
+    },
+    {
+      "fullName": "NousResearch/hermes-agent",
+      "starGain": 184,
+      "stars": 9346,
+      "zone": "rising",
+      "language": "Python"
+    },
+    {
+      "fullName": "EvoScientist/EvoScientist",
+      "starGain": 126,
+      "stars": 1289,
+      "zone": "rising",
+      "language": "Python"
+    },
+    {
+      "fullName": "aiming-lab/MetaClaw",
+      "starGain": 123,
+      "stars": 2180,
+      "zone": "rising",
+      "language": "Python"
+    },
+    {
+      "fullName": "jundot/omlx",
+      "starGain": 117,
+      "stars": 6092,
+      "zone": "rising",
+      "language": "Python"
+    },
+    {
+      "fullName": "alibaba/OpenSandbox",
+      "starGain": 90,
+      "stars": 8863,
+      "zone": "rising",
+      "language": "Python"
+    },
+    {
+      "fullName": "saturndec/waoowaoo",
+      "starGain": 60,
+      "stars": 9857,
+      "zone": "rising",
+      "language": "TypeScript"
+    },
+    {
+      "fullName": "EverMind-AI/EverMemOS",
+      "starGain": 57,
+      "stars": 2849,
+      "zone": "rising",
+      "language": "Python"
+    },
+    {
+      "fullName": "CortexReach/memory-lancedb-pro",
+      "starGain": 56,
+      "stars": 3183,
+      "zone": "rising",
+      "language": "TypeScript"
+    }
+  ],
   "trendingTopics": [
     {
       "topic": "llm",
       "repoCount": 100,
-      "risingCount": 295,
+      "risingCount": 217,
       "breakoutCount": 0,
-      "avgVelocity": 0.01
+      "avgVelocity": 0
     },
     {
       "topic": "ai-agent",
-      "repoCount": 113,
-      "risingCount": 177,
-      "breakoutCount": 2,
-      "avgVelocity": 0.04
+      "repoCount": 114,
+      "risingCount": 137,
+      "breakoutCount": 0,
+      "avgVelocity": 0
+    },
+    {
+      "topic": "rag",
+      "repoCount": 132,
+      "risingCount": 129,
+      "breakoutCount": 0,
+      "avgVelocity": 0
     },
     {
       "topic": "rust",
       "repoCount": 113,
-      "risingCount": 172,
+      "risingCount": 111,
+      "breakoutCount": 0,
+      "avgVelocity": 0
+    },
+    {
+      "topic": "vector-database",
+      "repoCount": 100,
+      "risingCount": 83,
       "breakoutCount": 0,
       "avgVelocity": 0
     },
     {
       "topic": "mcp",
-      "repoCount": 173,
-      "risingCount": 166,
-      "breakoutCount": 0,
-      "avgVelocity": 0.01
-    },
-    {
-      "topic": "rag",
-      "repoCount": 132,
-      "risingCount": 147,
-      "breakoutCount": 1,
-      "avgVelocity": 0.02
-    },
-    {
-      "topic": "webassembly",
-      "repoCount": 104,
-      "risingCount": 105,
+      "repoCount": 0,
+      "risingCount": 60,
       "breakoutCount": 0,
       "avgVelocity": 0
     },
     {
-      "topic": "bun",
-      "repoCount": 108,
-      "risingCount": 101,
+      "topic": "openai",
+      "repoCount": 0,
+      "risingCount": 57,
       "breakoutCount": 0,
       "avgVelocity": 0
     },
     {
-      "topic": "opentelemetry",
-      "repoCount": 100,
-      "risingCount": 100,
+      "topic": "retrieval",
+      "repoCount": 0,
+      "risingCount": 40,
       "breakoutCount": 0,
       "avgVelocity": 0
     }
@@ -153,12 +211,12 @@
     },
     {
       "language": "Python",
-      "count": 235,
+      "count": 238,
       "pct": 17
     },
     {
       "language": "Rust",
-      "count": 181,
+      "count": 182,
       "pct": 13
     },
     {
