@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
-import { X, ExternalLink, Star, GitFork, Flame, Tag, Copy, Check, Loader2 } from 'lucide-react';
+import { useEffect, useState, useCallback, useRef } from 'react';
+import { X, ExternalLink, Star, GitFork, Flame, Tag, Copy, Check, Loader2, ChevronDown, ChevronUp } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
@@ -32,11 +32,15 @@ interface RepoMeta {
 }
 
 export default function RepoDrawer({ reposMeta }: { reposMeta: Record<string, RepoMeta> }) {
-  const { selectedRepo, closeDrawer } = useDrawer();
+  const { selectedRepo, closeDrawer, goNext, goPrev, hasNext, hasPrev, currentIndex, repoList } = useDrawer();
   const [readme, setReadme] = useState<string | null>(null);
   const [readmeLoading, setReadmeLoading] = useState(false);
   const [readmeError, setReadmeError] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [showNextHint, setShowNextHint] = useState(false);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const bottomSentinelRef = useRef<HTMLDivElement>(null);
+  const scrollCooldownRef = useRef(false);
 
   const meta = selectedRepo ? reposMeta[selectedRepo] : null;
   const githubUrl = selectedRepo ? `https://github.com/${selectedRepo}` : '';
@@ -47,6 +51,10 @@ export default function RepoDrawer({ reposMeta }: { reposMeta: Record<string, Re
     setReadme(null);
     setReadmeLoading(true);
     setReadmeError(false);
+    setShowNextHint(false);
+
+    // Scroll to top when switching repos
+    if (scrollRef.current) scrollRef.current.scrollTop = 0;
 
     fetch(`https://raw.githubusercontent.com/${selectedRepo}/HEAD/README.md`)
       .then(res => {
@@ -63,10 +71,69 @@ export default function RepoDrawer({ reposMeta }: { reposMeta: Record<string, Re
       });
   }, [selectedRepo]);
 
-  // Close on Escape
+  // Scroll-to-bottom detection for TikTok-style navigation
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    let overscrollCount = 0;
+
+    function handleScroll() {
+      const { scrollTop, scrollHeight, clientHeight } = container!;
+      const atBottom = scrollTop + clientHeight >= scrollHeight - 20;
+
+      if (atBottom && hasNext && !readmeLoading) {
+        setShowNextHint(true);
+      } else {
+        setShowNextHint(false);
+        overscrollCount = 0;
+      }
+    }
+
+    function handleWheel(e: WheelEvent) {
+      const { scrollTop, scrollHeight, clientHeight } = container!;
+      const atBottom = scrollTop + clientHeight >= scrollHeight - 5;
+      const atTop = scrollTop <= 5;
+
+      // Scrolling down past bottom → go next
+      if (atBottom && e.deltaY > 15 && hasNext && !scrollCooldownRef.current && !readmeLoading) {
+        overscrollCount++;
+        if (overscrollCount >= 2) {
+          scrollCooldownRef.current = true;
+          goNext();
+          overscrollCount = 0;
+          setTimeout(() => { scrollCooldownRef.current = false; }, 500);
+        }
+      }
+      // Scrolling up past top → go prev
+      else if (atTop && e.deltaY < -15 && hasPrev && !scrollCooldownRef.current && !readmeLoading) {
+        overscrollCount++;
+        if (overscrollCount >= 2) {
+          scrollCooldownRef.current = true;
+          goPrev();
+          overscrollCount = 0;
+          setTimeout(() => { scrollCooldownRef.current = false; }, 500);
+        }
+      }
+      else if (!atBottom && !atTop) {
+        overscrollCount = 0;
+      }
+    }
+
+    container.addEventListener('scroll', handleScroll, { passive: true });
+    container.addEventListener('wheel', handleWheel, { passive: true });
+    return () => {
+      container.removeEventListener('scroll', handleScroll);
+      container.removeEventListener('wheel', handleWheel);
+    };
+  }, [hasNext, hasPrev, goNext, goPrev, readmeLoading]);
+
+  // Close on Escape, arrow key nav
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
     if (e.key === 'Escape') closeDrawer();
-  }, [closeDrawer]);
+    if (e.key === 'ArrowDown' && e.metaKey && hasNext) { e.preventDefault(); goNext(); }
+    if (e.key === 'ArrowUp' && e.metaKey && hasPrev) { e.preventDefault(); goPrev(); }
+  }, [closeDrawer, goNext, goPrev, hasNext, hasPrev]);
 
   useEffect(() => {
     document.addEventListener('keydown', handleKeyDown);
@@ -81,6 +148,8 @@ export default function RepoDrawer({ reposMeta }: { reposMeta: Record<string, Re
   }
 
   const isOpen = !!selectedRepo;
+  const nextRepo = hasNext ? repoList[currentIndex + 1] : null;
+  const prevRepo = hasPrev ? repoList[currentIndex - 1] : null;
 
   return (
     <>
@@ -108,9 +177,35 @@ export default function RepoDrawer({ reposMeta }: { reposMeta: Record<string, Re
                   className="w-8 h-8 rounded-lg bg-slate-100 border border-[#E2E8F0] flex-shrink-0"
                   alt="Avatar"
                 />
-                <span className="text-sm font-bold text-slate-900 truncate">{selectedRepo}</span>
+                <div className="min-w-0">
+                  <span className="text-sm font-bold text-slate-900 truncate block">{selectedRepo}</span>
+                  {repoList.length > 1 && (
+                    <span className="text-xs text-slate-400">{currentIndex + 1} / {repoList.length}</span>
+                  )}
+                </div>
               </div>
               <div className="flex items-center gap-1 flex-shrink-0">
+                {/* Nav arrows */}
+                {repoList.length > 1 && (
+                  <>
+                    <button
+                      onClick={() => goPrev()}
+                      disabled={!hasPrev}
+                      className="p-1.5 rounded-lg hover:bg-slate-200 text-slate-400 hover:text-slate-600 transition-all disabled:opacity-20 disabled:cursor-not-allowed"
+                      title="Previous repo (⌘↑)"
+                    >
+                      <ChevronUp className="w-4 h-4" />
+                    </button>
+                    <button
+                      onClick={() => goNext()}
+                      disabled={!hasNext}
+                      className="p-1.5 rounded-lg hover:bg-slate-200 text-slate-400 hover:text-slate-600 transition-all disabled:opacity-20 disabled:cursor-not-allowed"
+                      title="Next repo (⌘↓)"
+                    >
+                      <ChevronDown className="w-4 h-4" />
+                    </button>
+                  </>
+                )}
                 <button
                   onClick={copyUrl}
                   className="p-1.5 rounded-lg hover:bg-slate-200 text-slate-400 hover:text-slate-600 transition-all"
@@ -182,8 +277,8 @@ export default function RepoDrawer({ reposMeta }: { reposMeta: Record<string, Re
               </div>
             )}
 
-            {/* README */}
-            <div className="flex-1 overflow-y-auto px-5 py-5">
+            {/* README — scrollable area with TikTok-style navigation */}
+            <div ref={scrollRef} className="flex-1 overflow-y-auto px-5 py-5 scroll-smooth">
               {readmeLoading && (
                 <div className="flex items-center justify-center py-12 gap-2">
                   <Loader2 className="w-5 h-5 text-slate-400 animate-spin" />
@@ -211,6 +306,33 @@ export default function RepoDrawer({ reposMeta }: { reposMeta: Record<string, Re
                 ">
                   <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{readme}</ReactMarkdown>
                 </article>
+              )}
+
+              {/* Next repo hint at bottom */}
+              {hasNext && nextRepo && !readmeLoading && readme && (
+                <div ref={bottomSentinelRef} className="mt-8 pt-6 border-t border-dashed border-[#E2E8F0]">
+                  <div className={`flex flex-col items-center gap-2 transition-all duration-300 ${showNextHint ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-1'}`}>
+                    <ChevronDown className={`w-5 h-5 text-[#007AFF] ${showNextHint ? 'animate-bounce' : ''}`} />
+                    <p className="text-xs text-slate-400 text-center">
+                      Keep scrolling for next
+                    </p>
+                    <div className="flex items-center gap-2 bg-slate-50 rounded-xl px-3 py-2 border border-[#E2E8F0]">
+                      <img
+                        src={`https://github.com/${nextRepo.split('/')[0]}.png`}
+                        className="w-5 h-5 rounded-md bg-slate-100"
+                        alt=""
+                      />
+                      <span className="text-xs font-semibold text-slate-700">{nextRepo}</span>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Previous repo hint at top (shown when at top) */}
+              {!hasNext && !hasPrev && !readmeLoading && readme && (
+                <div className="mt-8 text-center">
+                  <p className="text-xs text-slate-300">End of list</p>
+                </div>
               )}
             </div>
 

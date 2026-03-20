@@ -195,7 +195,7 @@ export default function ReposTable({ repos, languages }: ReposTableProps) {
                 return (
                   <tr
                     key={repo.id}
-                    onClick={() => openDrawer(repo.fullName)}
+                    onClick={() => openDrawer(repo.fullName, filtered.map(r => r.fullName))}
                     className={`border-b border-[#E2E8F0] cursor-pointer transition-colors ${
                       isSelected ? 'bg-[#007AFF]/5 border-l-2 border-l-[#007AFF]' : 'hover:bg-slate-50/80'
                     }`}

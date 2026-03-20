@@ -7,15 +7,16 @@ interface RepoLinkProps {
   fullName: string;
   children: ReactNode;
   className?: string;
+  repoList?: string[];
 }
 
-export default function RepoLink({ fullName, children, className = '' }: RepoLinkProps) {
+export default function RepoLink({ fullName, children, className = '', repoList }: RepoLinkProps) {
   const { openDrawer } = useDrawer();
 
   function handleClick(e: MouseEvent) {
     e.preventDefault();
     e.stopPropagation();
-    openDrawer(fullName);
+    openDrawer(fullName, repoList);
   }
 
   return (

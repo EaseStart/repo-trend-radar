@@ -167,6 +167,7 @@ export default async function Home() {
             <div className="flex-1 overflow-y-auto custom-scrollbar">
               {breakoutRepos.length > 0 ? breakoutRepos.map((repo, idx) => (
                 <RepoLink key={repo.id} fullName={repo.fullName}
+                  repoList={breakoutRepos.map(r => r.fullName)}
                   className="p-4 px-5 border-b border-[#E2E8F0] last:border-0 hover:bg-slate-50 transition-colors flex items-center justify-between group/item cursor-pointer block"
                 >
                   <div className="flex items-center gap-3">
@@ -239,7 +240,7 @@ export default async function Home() {
                     <tr key={repo.id} className="border-b border-[#E2E8F0] hover:bg-slate-50/80 transition-colors">
                       <td className="py-3 px-6 text-xs text-slate-300 font-bold">{String(i + 1).padStart(2, '0')}</td>
                       <td className="py-3 px-3">
-                        <RepoLink fullName={repo.fullName} className="text-[#007AFF] hover:underline font-medium text-xs">
+                        <RepoLink fullName={repo.fullName} repoList={topRising.map(r => r.fullName)} className="text-[#007AFF] hover:underline font-medium text-xs">
                           {repo.fullName}
                         </RepoLink>
                         <p className="text-xs text-slate-400 mt-0.5 line-clamp-1 max-w-xs">{repo.description}</p>
