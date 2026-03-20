@@ -2,13 +2,14 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Radar, LayoutDashboard, TrendingUp, Layers } from 'lucide-react';
+import { Radar, LayoutDashboard, List, TrendingUp, Layers } from 'lucide-react';
 
 export default function Sidebar() {
   const pathname = usePathname();
 
   const navItems = [
     { name: 'DASHBOARD', href: '/', icon: LayoutDashboard },
+    { name: 'REPOS', href: '/repos', icon: List },
     { name: 'TRENDS', href: '/clusters', icon: TrendingUp },
     { name: 'GRADUATED', href: '/graduated', icon: Layers },
   ];
