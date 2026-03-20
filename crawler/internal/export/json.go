@@ -123,7 +123,20 @@ func exportRepos(database *db.Database, dir string) error {
 		return err
 	}
 
-	exports := make([]RepoExport, 0, len(repos))
+	// ADDITIVE: read existing repos.json to preserve previously exported repos
+	existingPath := filepath.Join(dir, "repos.json")
+	existingMap := make(map[string]RepoExport)
+	if data, err := os.ReadFile(existingPath); err == nil {
+		var existing []RepoExport
+		if json.Unmarshal(data, &existing) == nil {
+			for _, e := range existing {
+				existingMap[e.FullName] = e
+			}
+			log.Printf("📂 Loaded %d existing repos from repos.json", len(existingMap))
+		}
+	}
+
+	// Build new exports from DB (takes priority over existing)
 	for _, r := range repos {
 		var topics []string
 		json.Unmarshal([]byte(r.Topics), &topics)
@@ -150,7 +163,7 @@ func exportRepos(database *db.Database, dir string) error {
 			}
 		}
 
-		exports = append(exports, RepoExport{
+		existingMap[r.FullName] = RepoExport{
 			ID:              r.ID,
 			FullName:        r.FullName,
 			Description:     derefStr(r.Description),
@@ -162,10 +175,25 @@ func exportRepos(database *db.Database, dir string) error {
 			HeatScore:       math.Round(r.HeatScore*100) / 100,
 			VelocityHistory: history,
 			TractionSignals: tractionExport,
-		})
+		}
 	}
 
-	return writeJSON(filepath.Join(dir, "repos.json"), exports)
+	// Convert map to sorted slice
+	exports := make([]RepoExport, 0, len(existingMap))
+	for _, e := range existingMap {
+		exports = append(exports, e)
+	}
+	// Sort by heat score descending
+	for i := 0; i < len(exports); i++ {
+		for j := i + 1; j < len(exports); j++ {
+			if exports[j].HeatScore > exports[i].HeatScore {
+				exports[i], exports[j] = exports[j], exports[i]
+			}
+		}
+	}
+
+	log.Printf("📦 Exporting %d repos (additive merge)", len(exports))
+	return writeJSON(existingPath, exports)
 }
 
 type TopicExport struct {

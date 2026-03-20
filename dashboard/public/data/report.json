@@ -1,19 +1,26 @@
 {
-  "generatedAt": "2026-03-20T02:17:33.655Z",
+  "generatedAt": "2026-03-20T02:33:30.891Z",
   "hasPreviousData": false,
-  "narrative": "Tracked 442 repos. \"llm\" leads with 219 rising repos.",
+  "narrative": "Tracked 1365 repos. \"llm\" leads with 295 rising repos.",
   "overview": {
-    "totalTracked": 442,
+    "totalTracked": 1365,
     "prevTracked": null,
     "newCount": 10,
     "zoneChangeCount": 0,
     "topMoverCount": 0,
-    "breakoutCount": 0,
-    "risingCount": 442,
-    "seedlingCount": 18,
-    "scanAt": "2026-03-20 02:03:49"
+    "breakoutCount": 4,
+    "risingCount": 1130,
+    "seedlingCount": 231,
+    "scanAt": "2026-03-20 00:21:55"
   },
   "newDiscoveries": [
+    {
+      "fullName": "electric-sql/electric",
+      "description": "Read-path sync engine for Postgres that handles partial replication, data delivery and fan-out.",
+      "language": "Elixir",
+      "stars": 9999,
+      "zone": "rising"
+    },
     {
       "fullName": "Netflix/metaflow",
       "description": "Build, Manage and Deploy AI/ML Systems",
@@ -25,35 +32,49 @@
       "fullName": "humanlayer/humanlayer",
       "description": "The best way to get AI coding agents to solve hard problems in complex codebases.",
       "language": "TypeScript",
-      "stars": 9935,
+      "stars": 9932,
+      "zone": "rising"
+    },
+    {
+      "fullName": "unoplatform/uno",
+      "description": "Open-source platform for building cross-platform native Mobile, Web, Desktop and Embedded apps quickly.  Create rich, C#/XAML, single-codebase apps from any IDE. Hot Reload included! 90m+ NuGet Downloads!!",
+      "language": "C#",
+      "stars": 9866,
       "zone": "rising"
     },
     {
       "fullName": "liyupi/ai-guide",
       "description": "程序员鱼皮的 AI 资源大全 + Vibe Coding 零基础教程，分享大模型选择指南（DeepSeek / GPT / Gemini / Claude）、最新 AI 资讯、Prompt 提示词大全、AI 知识百科（RAG / MCP / A2A）、AI 编程教程、AI 工具用法（Cursor / Claude Code / OpenClaw / TRAE / Lovable / Agent Skills）、AI 开发框架教程（Spring AI / LangChain）、AI 产品变现指南，帮你快速掌握 AI 技术，走在时代前沿。本项目为开源文档版本，已升级为鱼皮 AI 导航网站",
       "language": "JavaScript",
-      "stars": 9865,
+      "stars": 9860,
       "zone": "rising"
     },
     {
       "fullName": "sigoden/dufs",
       "description": "A file server that supports static serving, uploading, searching, accessing control, webdav...",
       "language": "Rust",
-      "stars": 9838,
+      "stars": 9837,
       "zone": "rising"
     },
     {
       "fullName": "saturndec/waoowaoo",
       "description": "首家工业级全流程 AI 影视生产平台。Industry-first professional AI Agent platform for controllable film & video production. From shorts to live-action with Hollywood-standard workflows.",
       "language": "TypeScript",
-      "stars": 9808,
+      "stars": 9797,
+      "zone": "rising"
+    },
+    {
+      "fullName": "ValueCell-ai/valuecell",
+      "description": "ValueCell is a community-driven, multi-agent platform for financial applications.",
+      "language": "Python",
+      "stars": 9682,
       "zone": "rising"
     },
     {
       "fullName": "sigoden/aichat",
       "description": "All-in-one LLM CLI tool featuring Shell Assistant, Chat-REPL, RAG, AI Tools & Agents, with access to OpenAI, Claude, Gemini, Ollama, Groq, and more.",
       "language": "Rust",
-      "stars": 9577,
+      "stars": 9575,
       "zone": "rising"
     },
     {
@@ -61,27 +82,6 @@
       "description": "An operating system designed for hosting containers",
       "language": "Rust",
       "stars": 9555,
-      "zone": "rising"
-    },
-    {
-      "fullName": "lancedb/lancedb",
-      "description": "Developer-friendly OSS embedded retrieval library for multimodal AI. Search More; Manage Less.",
-      "language": "HTML",
-      "stars": 9555,
-      "zone": "rising"
-    },
-    {
-      "fullName": "SeaQL/sea-orm",
-      "description": "🐚 A powerful relational ORM for Rust",
-      "language": "Rust",
-      "stars": 9459,
-      "zone": "rising"
-    },
-    {
-      "fullName": "chaitin/PandaWiki",
-      "description": "PandaWiki 是一款 AI 大模型驱动的开源知识库搭建系统，帮助你快速构建智能化的 产品文档、技术文档、FAQ、博客系统，借助大模型的力量为你提供 AI 创作、AI 问答、AI 搜索等能力。",
-      "language": "TypeScript",
-      "stars": 9360,
       "zone": "rising"
     }
   ],
@@ -91,100 +91,100 @@
     {
       "topic": "llm",
       "repoCount": 100,
-      "risingCount": 219,
+      "risingCount": 295,
       "breakoutCount": 0,
-      "avgVelocity": 0
+      "avgVelocity": 0.01
     },
     {
       "topic": "ai-agent",
-      "repoCount": 114,
-      "risingCount": 136,
-      "breakoutCount": 0,
-      "avgVelocity": 0
-    },
-    {
-      "topic": "rag",
-      "repoCount": 132,
-      "risingCount": 129,
-      "breakoutCount": 0,
-      "avgVelocity": 0
+      "repoCount": 113,
+      "risingCount": 177,
+      "breakoutCount": 2,
+      "avgVelocity": 0.04
     },
     {
       "topic": "rust",
       "repoCount": 113,
-      "risingCount": 111,
-      "breakoutCount": 0,
-      "avgVelocity": 0
-    },
-    {
-      "topic": "vector",
-      "repoCount": 0,
-      "risingCount": 89,
-      "breakoutCount": 0,
-      "avgVelocity": 0
-    },
-    {
-      "topic": "vector-database",
-      "repoCount": 100,
-      "risingCount": 82,
-      "breakoutCount": 0,
-      "avgVelocity": 0
-    },
-    {
-      "topic": "search",
-      "repoCount": 0,
-      "risingCount": 66,
+      "risingCount": 172,
       "breakoutCount": 0,
       "avgVelocity": 0
     },
     {
       "topic": "mcp",
-      "repoCount": 0,
-      "risingCount": 59,
+      "repoCount": 173,
+      "risingCount": 166,
+      "breakoutCount": 0,
+      "avgVelocity": 0.01
+    },
+    {
+      "topic": "rag",
+      "repoCount": 132,
+      "risingCount": 147,
+      "breakoutCount": 1,
+      "avgVelocity": 0.02
+    },
+    {
+      "topic": "webassembly",
+      "repoCount": 104,
+      "risingCount": 105,
+      "breakoutCount": 0,
+      "avgVelocity": 0
+    },
+    {
+      "topic": "bun",
+      "repoCount": 108,
+      "risingCount": 101,
+      "breakoutCount": 0,
+      "avgVelocity": 0
+    },
+    {
+      "topic": "opentelemetry",
+      "repoCount": 100,
+      "risingCount": 100,
       "breakoutCount": 0,
       "avgVelocity": 0
     }
   ],
   "topLanguages": [
     {
+      "language": "TypeScript",
+      "count": 341,
+      "pct": 25
+    },
+    {
       "language": "Python",
-      "count": 134,
-      "pct": 30
+      "count": 235,
+      "pct": 17
     },
     {
       "language": "Rust",
-      "count": 97,
-      "pct": 22
-    },
-    {
-      "language": "TypeScript",
-      "count": 67,
-      "pct": 15
+      "count": 181,
+      "pct": 13
     },
     {
       "language": "Go",
-      "count": 21,
-      "pct": 5
+      "count": 129,
+      "pct": 9
     },
     {
-      "language": "Jupyter Notebook",
-      "count": 19,
-      "pct": 4
-    },
-    {
-      "language": "C++",
-      "count": 16,
-      "pct": 4
+      "language": "Zig",
+      "count": 81,
+      "pct": 6
     },
     {
       "language": "JavaScript",
-      "count": 15,
-      "pct": 3
+      "count": 75,
+      "pct": 5
+    },
+    {
+      "language": "C++",
+      "count": 34,
+      "pct": 2
     },
     {
       "language": "Java",
-      "count": 14,
-      "pct": 3
+      "count": 30,
+      "pct": 2
     }
   ]
 }
