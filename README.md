@@ -1,40 +1,88 @@
-# 📡 Repo Trend Radar
+<div align="center">
+  <img src="dashboard/public/logo.png" alt="Repo Trend Radar Logo" width="120" />
+  
+  <h1>radar. 📡</h1>
+  <p><strong>For builders tracking what's next in open source.</strong></p>
 
-> **For builders tracking what's next in open source.**
+  <!-- Badges -->
+  <a href="https://github.com/easestart/repo-trend-radar/stargazers"><img src="https://img.shields.io/github/stars/easestart/repo-trend-radar?style=for-the-badge&color=2F81F7" alt="Stars" /></a>
+  <a href="https://github.com/easestart/repo-trend-radar/network/members"><img src="https://img.shields.io/github/forks/easestart/repo-trend-radar?style=for-the-badge&color=238636" alt="Forks" /></a>
+  <a href="https://github.com/easestart/repo-trend-radar/blob/main/LICENSE"><img src="https://img.shields.io/github/license/easestart/repo-trend-radar?style=for-the-badge&color=8957E5" alt="License" /></a>
+  <a href="https://github.com/easestart/repo-trend-radar/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/easestart/repo-trend-radar/ci.yml?style=for-the-badge&color=238636" alt="Build Status" /></a>
 
-Automated detection of emerging open-source technology ecosystems by analyzing GitHub repository growth patterns across topics.
+  <p>
+    <a href="#-features">Features</a> •
+    <a href="#-architecture">Architecture</a> •
+    <a href="#-quick-start">Quick Start</a> •
+    <a href="#-the-zone-system">Zone System</a>
+  </p>
+</div>
+
+<!-- Visual Separator -->
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=2&customColorList=11,20" width="100%" alt="separator">
+
+<br>
 
 <p align="center">
-  <img src="docs/slides/carousel.gif" width="600" alt="Repo Trend Radar — Catch trends at 50 stars, not 50,000" />
+  <em>Automated detection of emerging open-source technology ecosystems by analyzing GitHub repository growth patterns across topics.</em>
+  <br>
+  Catch trends at 50 stars, not 50,000.
 </p>
 
----
+<p align="center">
+  <img src="docs/slides/carousel.gif" width="700" alt="Repo Trend Radar Preview" style="border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+</p>
+
+<br>
+
+## 🛠️ Stack
+
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=go,sqlite,nextjs,react,tailwind,github&theme=light" alt="Tech Stack" />
+  </a>
+</p>
 
 ## ✨ Features
 
-- 🔍 **Auto-discover** new repos by rotating through seed topics and organic expansion
-- 📊 **Track** star velocity across zones: Seedling → Rising → Breakout → Graduated
-- 🧬 **Detect** trend clusters — topics where multiple repos grow simultaneously
-- 📖 **Analyze** README signals (star charts, "used by" sections, download badges)
-- 🎯 **Score** confidence using multi-signal weighting + graduated correlation
-- 📋 **Interactive dashboard** — every data point is clickable, TikTok-style README browsing
-- 📝 **Scan reports** — automated delta reports after each daily scan
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🔍 Discovery & Tracking</h3>
+      <ul>
+        <li><b>Auto-discover</b> new repos by rotating through seed topics</li>
+        <li><b>Track star velocity</b> across life-cycle zones</li>
+        <li><b>Detect trend clusters</b> (multiple repos growing simultaneously)</li>
+        <li><b>Analyze README signals</b> (star charts, "used by" sections, badges)</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h3>📋 Output & UX</h3>
+      <ul>
+        <li><b>Interactive dashboard</b> with TikTok-style README browsing</li>
+        <li><b>Score confidence</b> using multi-signal weighting</li>
+        <li><b>Scan reports</b> — automated delta reports after each daily scan</li>
+        <li><b>Deep-linkable filters</b> (/repos?zone=breakout&language=Rust)</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-## Architecture
+## 🏗️ Architecture
 
-```
+```text
 ┌──────────────┐     ┌──────────┐     ┌──────────────┐
 │  Go Crawler  │────▶│  SQLite  │────▶│  JSON Export  │
 │  (daily cron)│     │  (WAL)   │     │  (5 files)    │
 └──────────────┘     └──────────┘     └──────┬───────┘
                                              │
                                     ┌────────▼────────┐
-                                    │  Next.js Static  │
-                                    │  (GitHub Pages)  │
+                                    │  Next.js Static │
+                                    │  (GitHub Pages) │
                                     └─────────────────┘
 ```
 
-## Quick Start
+## 🚀 Quick Start
 
 ```bash
 # Clone
@@ -45,15 +93,17 @@ cd repo-trend-radar
 cp .env.example .env
 # Add your GITHUB_TOKEN to .env
 
-# Build crawler
+# Build & Run Crawler
 make build
-
-# Run full scan
 make scan
 
 # Preview dashboard
 cd dashboard && npm install && npm run dev
 ```
+
+<details>
+<summary><b>🛠️ CLI Commands & Fork Configuration (Click to expand)</b></summary>
+<br>
 
 ### Fork Configuration
 
@@ -64,39 +114,13 @@ const siteConfig = {
   githubRepo: 'your-username/repo-trend-radar',
   footer: {
     design:     { label: 'Your Studio', url: null },
-    ideation:   { label: 'Your Company', url: null },
-    developers: 'Your Team',
+    // ...
   },
 };
 ```
+Or simply set `NEXT_PUBLIC_GITHUB_REPO=your-username/repo-trend-radar` in `.env`.
 
-Or set the environment variable `NEXT_PUBLIC_GITHUB_REPO=your-username/repo-trend-radar`.
-
-## Project Structure
-
-```
-repo-trend-radar/
-├── crawler/              # Go 1.23 module
-│   ├── cmd/radar/        # CLI entry (cobra)
-│   └── internal/         # Core packages
-│       ├── db/           # SQLite + models
-│       ├── github/       # REST + GraphQL client
-│       ├── scanner/      # Explorer + Tracker + Deep
-│       ├── readme/       # Traction signal mining
-│       ├── cluster/      # Detection + confidence scoring
-│       ├── antigaming/   # Bot detection
-│       └── export/       # JSON generator (additive)
-├── dashboard/            # Next.js 15 (static export)
-│   ├── app/              # Pages (homepage, repos, clusters, graduated)
-│   ├── components/       # React components (drawer, charts, table)
-│   ├── site.config.ts    # Fork-friendly configuration
-│   └── public/data/      # Generated JSON files
-├── docs/slides/          # Marketing carousel
-├── data/                 # SQLite database (gitignored)
-└── .github/workflows/    # CI/CD (daily scan + deploy)
-```
-
-## CLI Commands
+### Available CLI Commands
 
 | Command | Description |
 |---------|-------------|
@@ -108,33 +132,22 @@ repo-trend-radar/
 | `radar export` | Generate JSON for dashboard |
 | `radar stats` | Print database statistics |
 
-## Zone System
+</details>
+
+## 🌍 The Zone System
 
 | Zone | Stars | Scan Frequency | Description |
 |------|-------|----------------|-------------|
-| 🌱 Seedling | 1-99 | Every 3 days | Recently discovered, watching |
-| 📈 Rising | 100-9999 | Daily | Growing, tracking velocity |
-| 🔥 Breakout | heat > 0.6 | Daily + deep | Rapid acceleration |
-| 🏛️ Graduated | 10,000+ | Archived | Hall of fame, correlation data |
+| 🌱 **Seedling** | 1-99 | Every 3 days | Recently discovered, watching |
+| 📈 **Rising** | 100-99,999 | Daily | Growing, tracking velocity |
+| 🔥 **Breakout** | heat > 0.6 | Daily + deep | Rapid acceleration |
+| 🏛️ **Graduated** | 10,000+ | Archived | Hall of fame, correlation data |
 
-## Dashboard Features
+<br>
 
-| Feature | Description |
-|---------|-------------|
-| **Interactive stat cards** | Click any metric to drill down |
-| **Clickable charts** | Zone bars & language bars navigate to filtered views |
-| **Topic filter** | Filter repos by GitHub topics (llm, rag, ai-agent...) |
-| **README drawer** | In-app preview with TikTok-style infinite scroll |
-| **Scan reports** | Automated delta reports with new discoveries, zone changes, top movers |
-| **Trigger Scan** | One-click button to trigger GitHub Actions workflow |
-| **Deep-linkable filters** | Share URLs like `/repos?zone=breakout&language=Rust` |
-
-## License
-
-MIT © [EaseStart](https://github.com/easestart)
-
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=2&customColorList=11,20" width="100%" alt="separator">
 
 <p align="center">
+  MIT © <a href="https://github.com/easestart">EaseStart</a><br>
   <sub>Design by <a href="https://easeui.design/">EaseUI</a> · Ideation by EaseStart · Developed by Jang, Lucius, Barry</sub>
 </p>
