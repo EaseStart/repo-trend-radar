@@ -202,7 +202,8 @@ export default function RepoDrawer({ reposMeta }: { reposMeta: Record<string, Re
                   prose-h2:text-lg prose-h3:text-base
                   prose-a:text-[#007AFF] prose-a:no-underline hover:prose-a:underline
                   prose-code:text-xs prose-code:bg-slate-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:before:content-none prose-code:after:content-none
-                  prose-pre:bg-slate-900 prose-pre:text-slate-100 prose-pre:rounded-xl prose-pre:text-xs
+                  prose-pre:bg-slate-900 prose-pre:rounded-xl prose-pre:text-xs
+                  [&_pre_code]:bg-transparent [&_pre_code]:text-slate-100 [&_pre_code]:p-0
                   prose-img:rounded-xl prose-img:max-w-full
                   prose-table:text-xs
                   prose-th:bg-slate-50 prose-th:p-2
