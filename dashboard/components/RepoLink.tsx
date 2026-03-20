@@ -19,7 +19,7 @@ export default function RepoLink({ fullName, children, className = '' }: RepoLin
   }
 
   return (
-    <button onClick={handleClick} className={`text-left cursor-pointer ${className}`}>
+    <button onClick={handleClick} className={`w-full text-left cursor-pointer ${className}`}>
       {children}
     </button>
   );
