@@ -301,7 +301,7 @@ export default async function Home() {
         {/* FOOTER */}
         <footer className="mt-16 pt-6 border-t border-[#E2E8F0] pb-8 flex items-center justify-center">
           <p className="text-xs text-slate-400 font-mono">
-            Design by <span className="font-bold text-slate-500">EaseUI</span> · Ideation by <span className="font-bold text-slate-500">EaseStart</span> · Developed by <span className="font-bold text-slate-500">Jang, Lucius, Barry</span>
+            Design by <a href="https://easeui.design/" target="_blank" rel="noopener noreferrer" className="font-bold text-slate-500 hover:text-[#007AFF] transition-colors">EaseUI</a> · Ideation by <span className="font-bold text-slate-500">EaseStart</span> · Developed by <span className="font-bold text-slate-500">Jang, Lucius, Barry</span>
           </p>
         </footer>
       </div>
