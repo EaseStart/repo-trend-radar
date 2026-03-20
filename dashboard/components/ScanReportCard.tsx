@@ -1,5 +1,6 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { useDrawer } from './DrawerProvider';
 import type { ScanReport } from '@/lib/data';
 import { FileText, Sparkles, ArrowUpRight, TrendingUp, Star, Layers, Code } from 'lucide-react';
@@ -19,6 +20,7 @@ const ZONE_COLORS: Record<string, string> = {
 };
 
 export default function ScanReportCard({ report }: { report: ScanReport }) {
+  const router = useRouter();
   const { openDrawer } = useDrawer();
   const { overview, narrative, newDiscoveries, zoneChanges, topMovers, trendingTopics, topLanguages } = report;
 
@@ -42,9 +44,12 @@ export default function ScanReportCard({ report }: { report: ScanReport }) {
             <p className="text-xs text-slate-400">{scanDate} · {scanTime}</p>
           </div>
         </div>
-        <span className="text-xs font-bold text-[#007AFF] bg-[#007AFF]/10 px-2.5 py-1 rounded-lg">
-          {overview.totalTracked} repos
-        </span>
+        <button
+          onClick={() => router.push('/repos')}
+          className="text-xs font-bold text-[#007AFF] bg-[#007AFF]/10 px-2.5 py-1 rounded-lg hover:ring-1 hover:ring-[#007AFF]/30 transition-all cursor-pointer"
+        >
+          {overview.totalTracked} repos →
+        </button>
       </div>
 
       {/* Narrative */}
@@ -55,24 +60,44 @@ export default function ScanReportCard({ report }: { report: ScanReport }) {
         </div>
       </div>
 
-      {/* Stats Row */}
+      {/* Stats Row — clickable */}
       <div className="grid grid-cols-4 border-b border-[#E2E8F0]">
-        <div className="px-4 py-3 text-center border-r border-[#E2E8F0]">
-          <div className="text-lg font-bold text-slate-900">{overview.risingCount}</div>
-          <div className="text-xs text-slate-400">Rising</div>
-        </div>
-        <div className="px-4 py-3 text-center border-r border-[#E2E8F0]">
-          <div className="text-lg font-bold text-[#F59E0B]">{overview.breakoutCount}</div>
-          <div className="text-xs text-slate-400">Breakout</div>
-        </div>
-        <div className="px-4 py-3 text-center border-r border-[#E2E8F0]">
-          <div className="text-lg font-bold text-slate-900">{overview.newCount}</div>
-          <div className="text-xs text-slate-400">New</div>
-        </div>
-        <div className="px-4 py-3 text-center">
-          <div className="text-lg font-bold text-slate-900">{overview.zoneChangeCount}</div>
-          <div className="text-xs text-slate-400">Zone Δ</div>
-        </div>
+        <button
+          onClick={() => router.push('/repos?zone=rising')}
+          className="px-4 py-3 text-center border-r border-[#E2E8F0] hover:bg-slate-50 transition-colors cursor-pointer group"
+        >
+          <div className="text-lg font-bold text-slate-900 group-hover:text-[#007AFF] transition-colors">{overview.risingCount}</div>
+          <div className="text-xs text-slate-400 flex items-center justify-center gap-1">
+            Rising <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+          </div>
+        </button>
+        <button
+          onClick={() => router.push('/repos?zone=breakout')}
+          className="px-4 py-3 text-center border-r border-[#E2E8F0] hover:bg-slate-50 transition-colors cursor-pointer group"
+        >
+          <div className="text-lg font-bold text-[#F59E0B] group-hover:scale-110 transition-transform">{overview.breakoutCount}</div>
+          <div className="text-xs text-slate-400 flex items-center justify-center gap-1">
+            Breakout <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+          </div>
+        </button>
+        <button
+          onClick={() => router.push('/repos')}
+          className="px-4 py-3 text-center border-r border-[#E2E8F0] hover:bg-slate-50 transition-colors cursor-pointer group"
+        >
+          <div className="text-lg font-bold text-slate-900 group-hover:text-[#007AFF] transition-colors">{overview.newCount}</div>
+          <div className="text-xs text-slate-400 flex items-center justify-center gap-1">
+            New <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+          </div>
+        </button>
+        <button
+          onClick={() => router.push('/repos')}
+          className="px-4 py-3 text-center hover:bg-slate-50 transition-colors cursor-pointer group"
+        >
+          <div className="text-lg font-bold text-slate-900 group-hover:text-[#007AFF] transition-colors">{overview.zoneChangeCount}</div>
+          <div className="text-xs text-slate-400 flex items-center justify-center gap-1">
+            Zone Δ <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+          </div>
+        </button>
       </div>
 
       {/* Sections */}
@@ -88,7 +113,7 @@ export default function ScanReportCard({ report }: { report: ScanReport }) {
               {newDiscoveries.slice(0, 5).map(r => (
                 <button
                   key={r.fullName}
-                  onClick={() => openDrawer(r.fullName)}
+                  onClick={() => openDrawer(r.fullName, newDiscoveries.map(d => d.fullName))}
                   className="w-full flex items-center justify-between px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors text-left group"
                 >
                   <div className="min-w-0 flex-1">
@@ -121,7 +146,7 @@ export default function ScanReportCard({ report }: { report: ScanReport }) {
               {zoneChanges.slice(0, 5).map(z => (
                 <button
                   key={z.fullName}
-                  onClick={() => openDrawer(z.fullName)}
+                  onClick={() => openDrawer(z.fullName, zoneChanges.map(c => c.fullName))}
                   className="w-full flex items-center justify-between px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors text-left"
                 >
                   <span className="text-sm font-semibold text-slate-700">{z.fullName}</span>
@@ -147,7 +172,7 @@ export default function ScanReportCard({ report }: { report: ScanReport }) {
               {topMovers.slice(0, 5).map(m => (
                 <button
                   key={m.fullName}
-                  onClick={() => openDrawer(m.fullName)}
+                  onClick={() => openDrawer(m.fullName, topMovers.map(mv => mv.fullName))}
                   className="w-full flex items-center justify-between px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors text-left"
                 >
                   <span className="text-sm font-semibold text-slate-700">{m.fullName}</span>
@@ -158,7 +183,7 @@ export default function ScanReportCard({ report }: { report: ScanReport }) {
           </div>
         )}
 
-        {/* Trending Topics */}
+        {/* Trending Topics — clickable chips */}
         {trendingTopics.length > 0 && (
           <div className="px-5 py-4">
             <div className="flex items-center gap-2 mb-3">
@@ -167,18 +192,19 @@ export default function ScanReportCard({ report }: { report: ScanReport }) {
             </div>
             <div className="flex flex-wrap gap-2">
               {trendingTopics.map(t => (
-                <span
+                <button
                   key={t.topic}
-                  className="text-xs bg-slate-100 text-slate-600 px-2.5 py-1 rounded-lg"
+                  onClick={() => router.push(`/repos?topic=${encodeURIComponent(t.topic)}`)}
+                  className="text-xs bg-slate-100 text-slate-600 px-2.5 py-1 rounded-lg hover:bg-[#007AFF]/10 hover:text-[#007AFF] transition-colors cursor-pointer"
                 >
                   {t.topic} <span className="text-slate-400 ml-0.5">{t.risingCount}↑</span>
-                </span>
+                </button>
               ))}
             </div>
           </div>
         )}
 
-        {/* Languages */}
+        {/* Languages — clickable bars */}
         {topLanguages.length > 0 && (
           <div className="px-5 py-4">
             <div className="flex items-center gap-2 mb-3">
@@ -187,16 +213,20 @@ export default function ScanReportCard({ report }: { report: ScanReport }) {
             </div>
             <div className="space-y-1.5">
               {topLanguages.slice(0, 5).map(l => (
-                <div key={l.language} className="flex items-center gap-3">
-                  <span className="text-xs text-slate-600 w-20 truncate">{l.language}</span>
+                <button
+                  key={l.language}
+                  onClick={() => router.push(`/repos?language=${encodeURIComponent(l.language)}`)}
+                  className="w-full flex items-center gap-3 hover:bg-slate-50 rounded-lg px-1 py-0.5 transition-colors cursor-pointer group"
+                >
+                  <span className="text-xs text-slate-600 w-20 truncate group-hover:text-[#007AFF] transition-colors">{l.language}</span>
                   <div className="flex-1 h-2 bg-slate-100 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-[#007AFF]/30 rounded-full"
+                      className="h-full bg-[#007AFF]/30 rounded-full group-hover:bg-[#007AFF]/50 transition-colors"
                       style={{ width: `${Math.max(5, l.pct)}%` }}
                     />
                   </div>
                   <span className="text-xs text-slate-400 w-8 text-right">{l.pct}%</span>
-                </div>
+                </button>
               ))}
             </div>
           </div>

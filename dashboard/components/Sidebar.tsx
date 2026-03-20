@@ -1,8 +1,9 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Radar, LayoutDashboard, List, TrendingUp, Layers } from 'lucide-react';
+import { LayoutDashboard, List, TrendingUp, Layers } from 'lucide-react';
 
 export default function Sidebar() {
   const pathname = usePathname();
@@ -18,8 +19,14 @@ export default function Sidebar() {
     <aside className="fixed left-0 top-0 h-full w-[88px] bg-white border-r border-[#E2E8F0] z-[60] flex flex-col items-center py-8">
       {/* Fixed Logo */}
       <div className="mb-12 flex flex-col items-center justify-center w-full px-4 group">
-        <div className="w-12 h-12 bg-slate-900 shadow-lg shadow-slate-900/20 flex items-center justify-center rounded-2xl mb-2 transition-transform active:scale-95 cursor-pointer">
-          <Radar className="text-white w-6 h-6 animate-[spin_10s_linear_infinite]" />
+        <div className="w-14 h-14 flex items-center justify-center mb-2 transition-transform active:scale-95 cursor-pointer">
+          <Image 
+            src="/logo.png" 
+            alt="Repo Trend Radar" 
+            width={56} 
+            height={56} 
+            className="w-full h-full object-contain animate-[spin_20s_linear_infinite]"
+          />
         </div>
       </div>
       

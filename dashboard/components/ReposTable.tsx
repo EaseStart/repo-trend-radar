@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Search, X, ChevronUp, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useSearchParams } from 'next/navigation';
+import { Search, X, ChevronUp, ChevronDown, ChevronLeft, ChevronRight, Tag } from 'lucide-react';
 import { useDrawer } from './DrawerProvider';
 
 interface RepoData {
@@ -19,6 +20,7 @@ interface RepoData {
 interface ReposTableProps {
   repos: RepoData[];
   languages: string[];
+  topics?: string[];
 }
 
 type SortKey = 'stars' | 'forks' | 'heatScore';
@@ -40,16 +42,23 @@ const ZONE_BADGE: Record<string, string> = {
 
 const PAGE_SIZE = 25;
 
-export default function ReposTable({ repos, languages }: ReposTableProps) {
-  const [search, setSearch] = useState('');
-  const [zone, setZone] = useState<string>('all');
-  const [language, setLanguage] = useState<string>('all');
+export default function ReposTable({ repos, languages, topics = [] }: ReposTableProps) {
+  const searchParams = useSearchParams();
+  const urlZone = searchParams.get('zone') || '';
+  const urlLanguage = searchParams.get('language') || '';
+  const urlTopic = searchParams.get('topic') || '';
+  const urlSearch = searchParams.get('search') || '';
+
+  const [search, setSearch] = useState(urlSearch);
+  const [zone, setZone] = useState<string>(urlZone && ZONES.includes(urlZone as typeof ZONES[number]) ? urlZone : 'all');
+  const [language, setLanguage] = useState<string>(urlLanguage || 'all');
+  const [topic, setTopic] = useState<string>(urlTopic || 'all');
   const [sortKey, setSortKey] = useState<SortKey>('stars');
   const [sortDir, setSortDir] = useState<SortDir>('desc');
   const [page, setPage] = useState(1);
   const { openDrawer, selectedRepo } = useDrawer();
 
-  const hasFilters = search || zone !== 'all' || language !== 'all';
+  const hasFilters = search || zone !== 'all' || language !== 'all' || topic !== 'all';
 
   const filtered = useMemo(() => {
     let result = repos;
@@ -70,6 +79,10 @@ export default function ReposTable({ repos, languages }: ReposTableProps) {
       result = result.filter(r => r.language === language);
     }
 
+    if (topic !== 'all') {
+      result = result.filter(r => r.topics && r.topics.includes(topic));
+    }
+
     result = [...result].sort((a, b) => {
       const av = a[sortKey];
       const bv = b[sortKey];
@@ -77,7 +90,7 @@ export default function ReposTable({ repos, languages }: ReposTableProps) {
     });
 
     return result;
-  }, [repos, search, zone, language, sortKey, sortDir]);
+  }, [repos, search, zone, language, topic, sortKey, sortDir]);
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const safePage = Math.min(page, totalPages);
@@ -96,6 +109,7 @@ export default function ReposTable({ repos, languages }: ReposTableProps) {
     setSearch('');
     setZone('all');
     setLanguage('all');
+    setTopic('all');
     setSortKey('stars');
     setSortDir('desc');
     setPage(1);
@@ -154,6 +168,21 @@ export default function ReposTable({ repos, languages }: ReposTableProps) {
           <option value="all">All Languages</option>
           {languages.map(l => <option key={l} value={l}>{l}</option>)}
         </select>
+
+        {/* Topic filter */}
+        {topics.length > 0 && (
+          <div className="relative">
+            <Tag className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400 pointer-events-none" />
+            <select
+              value={topic}
+              onChange={e => { setTopic(e.target.value); setPage(1); }}
+              className="pl-8 pr-3 py-2.5 text-xs font-bold bg-slate-50 border border-[#E2E8F0] rounded-xl text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#007AFF]/20 min-w-[140px]"
+            >
+              <option value="all">All Topics</option>
+              {topics.map(t => <option key={t} value={t}>{t}</option>)}
+            </select>
+          </div>
+        )}
 
         <div className="flex items-center gap-3 ml-auto">
           <span className="text-xs font-bold text-slate-400">

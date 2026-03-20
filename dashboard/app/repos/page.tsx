@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { getRepos } from '@/lib/data';
 import ReposTable from '@/components/ReposTable';
 
@@ -8,6 +9,13 @@ export default async function ReposPage() {
 
   // Extract unique languages for filter dropdown
   const languages = Array.from(new Set(repos.map(r => r.language).filter(Boolean))).sort();
+
+  // Extract unique topics for filter
+  const topicSet = new Set<string>();
+  for (const r of repos) {
+    if (r.topics) for (const t of r.topics) topicSet.add(t);
+  }
+  const topics = Array.from(topicSet).sort();
 
   return (
     <>
@@ -21,7 +29,9 @@ export default async function ReposPage() {
       </header>
 
       <div className="max-w-[1600px] mx-auto p-4 lg:p-8">
-        <ReposTable repos={repos} languages={languages} />
+        <Suspense>
+          <ReposTable repos={repos} languages={languages} topics={topics} />
+        </Suspense>
       </div>
     </>
   );

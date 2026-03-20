@@ -1,5 +1,6 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { LineChart, Line, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, Cell } from 'recharts';
 
 // Simple Sparkline — reusable
@@ -22,19 +23,12 @@ export function Sparkline({ data, color = '#007AFF' }: { data: number[], color?:
   );
 }
 
-// Zone Distribution Chart — shows repo counts per zone
+// Zone Distribution Chart — clickable bars navigate to filtered repos
 const ZONE_COLORS: Record<string, string> = {
   seedling: '#94A3B8',
   rising: '#007AFF',
   breakout: '#F59E0B',
   graduated: '#22C55E',
-};
-
-const ZONE_LABELS: Record<string, string> = {
-  seedling: 'Seedling',
-  rising: 'Rising',
-  breakout: 'Breakout',
-  graduated: 'Graduated',
 };
 
 interface ZoneChartProps {
@@ -45,12 +39,21 @@ interface ZoneChartProps {
 }
 
 export function ZoneDistributionChart({ seedling, rising, breakout, graduated }: ZoneChartProps) {
+  const router = useRouter();
   const data = [
     { zone: 'seedling', label: 'Seedling', count: seedling },
     { zone: 'rising', label: 'Rising', count: rising },
     { zone: 'breakout', label: 'Breakout', count: breakout },
     { zone: 'graduated', label: 'Graduated', count: graduated },
   ];
+
+  function handleClick(entry: { zone: string }) {
+    if (entry.zone === 'graduated') {
+      router.push('/graduated');
+    } else {
+      router.push(`/repos?zone=${entry.zone}`);
+    }
+  }
 
   return (
     <ResponsiveContainer width="100%" height="100%">
@@ -80,7 +83,13 @@ export function ZoneDistributionChart({ seedling, rising, breakout, graduated }:
           }} 
           formatter={(value: number) => [value.toLocaleString(), 'Repos']}
         />
-        <Bar dataKey="count" radius={[6, 6, 0, 0]} maxBarSize={60}>
+        <Bar 
+          dataKey="count" 
+          radius={[6, 6, 0, 0]} 
+          maxBarSize={60} 
+          cursor="pointer"
+          onClick={(_, idx) => handleClick(data[idx])}
+        >
           {data.map((entry) => (
             <Cell key={entry.zone} fill={ZONE_COLORS[entry.zone] || '#94A3B8'} />
           ))}
@@ -90,13 +99,15 @@ export function ZoneDistributionChart({ seedling, rising, breakout, graduated }:
   );
 }
 
-// Top Languages Chart
+// Top Languages Chart — clickable bars navigate to filtered repos
 interface LangData {
   language: string;
   count: number;
 }
 
 export function TopLanguagesChart({ data }: { data: LangData[] }) {
+  const router = useRouter();
+
   const LANG_COLORS: Record<string, string> = {
     TypeScript: '#3178c6',
     JavaScript: '#f1e05a',
@@ -109,6 +120,10 @@ export function TopLanguagesChart({ data }: { data: LangData[] }) {
     Swift: '#F05138',
     Kotlin: '#A97BFF',
   };
+
+  function handleClick(lang: string) {
+    router.push(`/repos?language=${encodeURIComponent(lang)}`);
+  }
 
   return (
     <ResponsiveContainer width="100%" height="100%">
@@ -127,7 +142,13 @@ export function TopLanguagesChart({ data }: { data: LangData[] }) {
           contentStyle={{ borderRadius: '8px', border: '1px solid #E2E8F0', fontFamily: 'var(--font-sans)', fontSize: '12px' }}
           formatter={(value: number) => [value, 'Repos']}
         />
-        <Bar dataKey="count" radius={[0, 6, 6, 0]} maxBarSize={24}>
+        <Bar 
+          dataKey="count" 
+          radius={[0, 6, 6, 0]} 
+          maxBarSize={24} 
+          cursor="pointer"
+          onClick={(entry) => handleClick(entry.language)}
+        >
           {data.map((entry) => (
             <Cell key={entry.language} fill={LANG_COLORS[entry.language] || '#94A3B8'} />
           ))}
