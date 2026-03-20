@@ -10,7 +10,6 @@ export default function Sidebar() {
   const navItems = [
     { name: 'DASHBOARD', href: '/', icon: LayoutDashboard },
     { name: 'TRENDS', href: '/clusters', icon: TrendingUp },
-    { name: 'ANALYTICS', href: '/analytics', icon: Activity },
     { name: 'GRADUATED', href: '/graduated', icon: Layers },
   ];
 
