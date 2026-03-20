@@ -4,6 +4,7 @@ import { Sparkline, ZoneDistributionChart, TopLanguagesChart } from '@/component
 import RepoLink from '@/components/RepoLink';
 import ScanReportCard from '@/components/ScanReportCard';
 import Link from 'next/link';
+import siteConfig from '@/site.config';
 
 export default async function Home() {
   const [stats, repos, graduated, report] = await Promise.all([getStats(), getRepos(), getGraduated(), getReport()]);
@@ -36,7 +37,7 @@ export default async function Home() {
           </span>
           <div className="w-2 h-2 bg-[#22C55E] rounded-full animate-pulse" />
           <a
-            href="https://github.com/EaseStart/repo-trend-radar/actions/workflows/scan.yml"
+            href={`https://github.com/${siteConfig.githubRepo}/actions/workflows/scan.yml`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 text-xs font-bold text-white bg-slate-900 px-3 py-1.5 rounded-lg hover:bg-[#007AFF] transition-colors"
@@ -301,7 +302,19 @@ export default async function Home() {
         {/* FOOTER */}
         <footer className="mt-16 pt-6 border-t border-[#E2E8F0] pb-8 flex items-center justify-center">
           <p className="text-xs text-slate-400 font-mono">
-            Design by <a href="https://easeui.design/" target="_blank" rel="noopener noreferrer" className="font-bold text-slate-500 hover:text-[#007AFF] transition-colors">EaseUI</a> · Ideation by <span className="font-bold text-slate-500">EaseStart</span> · Developed by <span className="font-bold text-slate-500">Jang, Lucius, Barry</span>
+            {siteConfig.footer.design.url ? (
+              <>Design by <a href={siteConfig.footer.design.url} target="_blank" rel="noopener noreferrer" className="font-bold text-slate-500 hover:text-[#007AFF] transition-colors">{siteConfig.footer.design.label}</a></>
+            ) : (
+              <>Design by <span className="font-bold text-slate-500">{siteConfig.footer.design.label}</span></>
+            )}
+            {' · '}
+            {siteConfig.footer.ideation.url ? (
+              <>Ideation by <a href={siteConfig.footer.ideation.url} target="_blank" rel="noopener noreferrer" className="font-bold text-slate-500 hover:text-[#007AFF] transition-colors">{siteConfig.footer.ideation.label}</a></>
+            ) : (
+              <>Ideation by <span className="font-bold text-slate-500">{siteConfig.footer.ideation.label}</span></>
+            )}
+            {' · '}
+            Developed by <span className="font-bold text-slate-500">{siteConfig.footer.developers}</span>
           </p>
         </footer>
       </div>
