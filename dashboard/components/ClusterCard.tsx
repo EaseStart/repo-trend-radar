@@ -23,17 +23,17 @@ export default function ClusterCard({
 }: ClusterCardProps) {
   const confPct = Math.round(confidence * 100);
   const confColor =
-    confPct >= 80 ? "var(--accent-green)" : confPct >= 50 ? "var(--accent-blue)" : "var(--accent-orange)";
+    confPct >= 80 ? "#22C55E" : confPct >= 50 ? "#007AFF" : "#F59E0B";
 
   return (
-    <div className="bg-[var(--bg-card)] border border-[#30363d] rounded-xl p-5 hover:border-[#58a6ff33] transition-colors">
+    <div className="data-card p-5 hover:border-[#007AFF]/20 transition-colors">
       <div className="flex items-start justify-between mb-3">
         <div>
-          <h3 className="text-lg font-semibold text-[var(--text-primary)] flex items-center gap-2">
+          <h3 className="text-lg font-semibold text-slate-900 flex items-center gap-2">
             <span className="text-xl">🔥</span>
             {topic}
           </h3>
-          <p className="text-sm text-[var(--text-secondary)] mt-1">
+          <p className="text-sm text-slate-500 mt-1">
             {growingCount} of {totalCount} repos growing · avg +{avgVelocity.toFixed(1)}%/week
           </p>
         </div>
@@ -41,12 +41,12 @@ export default function ClusterCard({
           <div className="text-2xl font-bold" style={{ color: confColor }}>
             {confPct}%
           </div>
-          <div className="text-xs text-[var(--text-muted)]">confidence</div>
+          <div className="text-xs text-slate-400">confidence</div>
         </div>
       </div>
 
       {/* Confidence bar */}
-      <div className="w-full h-2 bg-[var(--bg-tertiary)] rounded-full mb-4 overflow-hidden">
+      <div className="w-full h-2 bg-slate-100 rounded-full mb-4 overflow-hidden">
         <div
           className="h-full rounded-full transition-all duration-500"
           style={{ width: `${confPct}%`, background: confColor }}
@@ -58,12 +58,12 @@ export default function ClusterCard({
         {growingRepos.slice(0, 5).map((repo) => (
           <div
             key={repo.full_name}
-            className="bg-[var(--bg-tertiary)] rounded-lg px-3 py-1.5 text-xs flex items-center gap-1.5"
+            className="bg-slate-100 rounded-lg px-3 py-1.5 text-xs flex items-center gap-1.5"
           >
-            <span className="text-[var(--text-primary)] font-medium">
+            <span className="text-slate-900 font-medium">
               {repo.full_name.split("/")[1]}
             </span>
-            <span className="text-[var(--accent-green)]">
+            <span className="text-[#22C55E]">
               +{repo.star_velocity_7d}⭐
             </span>
           </div>
@@ -72,7 +72,7 @@ export default function ClusterCard({
 
       {/* Graduated correlation */}
       {graduatedCorrelation > 0 && (
-        <div className="text-xs text-[var(--text-muted)] flex items-center gap-1">
+        <div className="text-xs text-slate-400 flex items-center gap-1">
           <span>🏛️</span>
           <span>{graduatedCorrelation} graduated repos in ecosystem</span>
         </div>

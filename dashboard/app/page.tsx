@@ -1,7 +1,6 @@
 import { getStats, getRepos, getGraduated } from '@/lib/data';
 import { Zap, ArrowUpRight, Star, Activity, TrendingUp, Award } from 'lucide-react';
 import { Sparkline, ZoneDistributionChart, TopLanguagesChart } from '@/components/Charts';
-import RepoCard from '@/components/RepoCard';
 
 export default async function Home() {
   const [stats, repos, graduated] = await Promise.all([getStats(), getRepos(), getGraduated()]);
