@@ -5,17 +5,7 @@
 Automated detection of emerging open-source technology ecosystems by analyzing GitHub repository growth patterns across topics.
 
 <p align="center">
-  <img src="docs/slides/slide_01_cover.png" width="32%" />
-  <img src="docs/slides/slide_02_content.png" width="32%" />
-  <img src="docs/slides/slide_03_content.png" width="32%" />
-</p>
-<p align="center">
-  <img src="docs/slides/slide_04_bridge.png" width="32%" />
-  <img src="docs/slides/slide_05_content.png" width="32%" />
-  <img src="docs/slides/slide_06_content.png" width="32%" />
-</p>
-<p align="center">
-  <img src="docs/slides/slide_07_cta.png" width="32%" />
+  <img src="docs/slides/carousel.gif" width="600" alt="Repo Trend Radar — Catch trends at 50 stars, not 50,000" />
 </p>
 
 ---

@@ -52,6 +52,7 @@ jobs:
           git config user.email "radar@easestart.dev"
           git add dashboard/public/data/ data/
           git diff --cached --quiet || git commit -m "chore(data): daily scan $(date +%Y-%m-%d)"
+          git pull --rebase origin main
           git push
 
       - name: Build dashboard
