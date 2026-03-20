@@ -2,8 +2,8 @@
 
 @theme {
   --font-sans: 'SF Pro Rounded', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  --font-mono: 'SF Mono', ui-monospace, SFMono-Regular, 'Menlo', monospace;
-  --font-data: 'SF Mono', ui-monospace, SFMono-Regular, monospace;
+  --font-mono: 'SF Pro Rounded', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-data: 'SF Pro Rounded', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }
 
 :root {

@@ -60,13 +60,13 @@ export function ZoneDistributionChart({ seedling, rising, breakout, graduated }:
           dataKey="label" 
           axisLine={false} 
           tickLine={false} 
-          tick={{ fill: '#64748B', fontSize: 10, fontFamily: 'var(--font-mono)' }} 
+          tick={{ fill: '#64748B', fontSize: 12, fontFamily: 'var(--font-sans)' }} 
           dy={10} 
         />
         <YAxis 
           axisLine={false} 
           tickLine={false} 
-          tick={{ fill: '#64748B', fontSize: 10, fontFamily: 'var(--font-mono)' }} 
+          tick={{ fill: '#64748B', fontSize: 12, fontFamily: 'var(--font-sans)' }} 
           width={50}
         />
         <Tooltip 
@@ -74,8 +74,8 @@ export function ZoneDistributionChart({ seedling, rising, breakout, graduated }:
           contentStyle={{ 
             borderRadius: '8px', 
             border: '1px solid #E2E8F0', 
-            fontFamily: 'var(--font-mono)', 
-            fontSize: '11px',
+            fontFamily: 'var(--font-sans)', 
+            fontSize: '12px',
             boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
           }} 
           formatter={(value: number) => [value.toLocaleString(), 'Repos']}
@@ -113,18 +113,18 @@ export function TopLanguagesChart({ data }: { data: LangData[] }) {
   return (
     <ResponsiveContainer width="100%" height="100%">
       <BarChart data={data} layout="vertical" margin={{ top: 5, right: 20, left: 0, bottom: 5 }}>
-        <XAxis type="number" axisLine={false} tickLine={false} tick={{ fill: '#64748B', fontSize: 10, fontFamily: 'var(--font-mono)' }} />
+        <XAxis type="number" axisLine={false} tickLine={false} tick={{ fill: '#64748B', fontSize: 12, fontFamily: 'var(--font-sans)' }} />
         <YAxis 
           type="category" 
           dataKey="language" 
           axisLine={false} 
           tickLine={false} 
-          tick={{ fill: '#64748B', fontSize: 10, fontFamily: 'var(--font-mono)' }} 
+          tick={{ fill: '#64748B', fontSize: 12, fontFamily: 'var(--font-sans)' }} 
           width={80}
         />
         <Tooltip 
           cursor={{ fill: '#E2E8F0', opacity: 0.3 }}
-          contentStyle={{ borderRadius: '8px', border: '1px solid #E2E8F0', fontFamily: 'var(--font-mono)', fontSize: '11px' }}
+          contentStyle={{ borderRadius: '8px', border: '1px solid #E2E8F0', fontFamily: 'var(--font-sans)', fontSize: '12px' }}
           formatter={(value: number) => [value, 'Repos']}
         />
         <Bar dataKey="count" radius={[0, 6, 6, 0]} maxBarSize={24}>

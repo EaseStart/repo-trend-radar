@@ -29,7 +29,7 @@ export default async function Home() {
           <span className="font-semibold">Repo Trend</span> Radar
         </h1>
         <div className="flex items-center gap-3">
-          <span className="text-[10px] font-mono font-bold text-slate-400 uppercase">
+          <span className="text-xs font-mono font-bold text-slate-400 uppercase">
             Last scan: {stats.lastScanAt || 'Never'}
           </span>
           <div className="w-2 h-2 bg-[#22C55E] rounded-full animate-pulse" />
@@ -44,13 +44,13 @@ export default async function Home() {
           <div className="col-span-1 lg:col-span-3 data-card p-6 flex flex-col justify-between min-h-[140px] group hover:border-[#007AFF]/30 transition-colors">
             <div className="flex justify-between items-start">
               <div>
-                <p className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-widest mb-1">Total Tracked</p>
+                <p className="text-xs font-mono font-bold text-slate-400 uppercase tracking-widest mb-1">Total Tracked</p>
                 <span className="text-3xl font-mono font-bold text-slate-900">{stats.totalTracked.toLocaleString()}</span>
               </div>
               <Activity className="w-5 h-5 text-[#007AFF] opacity-50 group-hover:opacity-100 transition-opacity" />
             </div>
             <div className="mt-4 pt-3 border-t border-[#E2E8F0] flex justify-between items-center">
-              <span className="text-[10px] font-mono font-bold text-slate-400 uppercase">Rising</span>
+              <span className="text-xs font-mono font-bold text-slate-400 uppercase">Rising</span>
               <span className="text-sm font-mono font-bold text-[#007AFF]">{stats.risingCount.toLocaleString()}</span>
             </div>
           </div>
@@ -58,18 +58,18 @@ export default async function Home() {
           <div className="col-span-1 lg:col-span-3 data-card p-6 flex flex-col justify-between min-h-[140px] group hover:border-[#F59E0B]/30 transition-colors">
             <div className="flex justify-between items-start">
               <div>
-                <p className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-widest mb-1">Breakout</p>
+                <p className="text-xs font-mono font-bold text-slate-400 uppercase tracking-widest mb-1">Breakout</p>
                 <div className="flex items-center gap-2">
                   <span className="text-3xl font-mono font-bold text-slate-900">{stats.breakoutCount}</span>
                   {stats.breakoutCount > 0 && (
-                    <span className="text-[10px] font-mono font-bold text-[#F59E0B] bg-[#F59E0B]/10 px-2 py-0.5 rounded-md">HOT</span>
+                    <span className="text-xs font-mono font-bold text-[#F59E0B] bg-[#F59E0B]/10 px-2 py-0.5 rounded-md">HOT</span>
                   )}
                 </div>
               </div>
               <Zap className="w-5 h-5 text-[#F59E0B] opacity-50 group-hover:opacity-100 transition-opacity" />
             </div>
             <div className="mt-4 pt-3 border-t border-[#E2E8F0] flex justify-between items-center">
-              <span className="text-[10px] font-mono font-bold text-slate-400 uppercase">Heat ≥ 0.5</span>
+              <span className="text-xs font-mono font-bold text-slate-400 uppercase">Heat ≥ 0.5</span>
               <span className="text-sm font-mono font-bold text-[#F59E0B]">{breakoutRepos.length}</span>
             </div>
           </div>
@@ -77,13 +77,13 @@ export default async function Home() {
           <div className="col-span-1 lg:col-span-3 data-card p-6 flex flex-col justify-between min-h-[140px] group hover:border-[#22C55E]/30 transition-colors">
             <div className="flex justify-between items-start">
               <div>
-                <p className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-widest mb-1">Graduated</p>
+                <p className="text-xs font-mono font-bold text-slate-400 uppercase tracking-widest mb-1">Graduated</p>
                 <span className="text-3xl font-mono font-bold text-slate-900">{stats.graduatedCount}</span>
               </div>
               <Award className="w-5 h-5 text-[#22C55E] opacity-50 group-hover:opacity-100 transition-opacity" />
             </div>
             <div className="mt-4 pt-3 border-t border-[#E2E8F0] flex justify-between items-center">
-              <span className="text-[10px] font-mono font-bold text-slate-400 uppercase">10K+ ⭐</span>
+              <span className="text-xs font-mono font-bold text-slate-400 uppercase">10K+ ⭐</span>
               <span className="text-sm font-mono font-bold text-[#22C55E]">{graduated.length}</span>
             </div>
           </div>
@@ -91,13 +91,13 @@ export default async function Home() {
           <div className="col-span-1 lg:col-span-3 data-card p-6 flex flex-col justify-between min-h-[140px] group hover:border-slate-300 transition-colors">
             <div className="flex justify-between items-start">
               <div>
-                <p className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-widest mb-1">Seedling</p>
+                <p className="text-xs font-mono font-bold text-slate-400 uppercase tracking-widest mb-1">Seedling</p>
                 <span className="text-3xl font-mono font-bold text-slate-900">{stats.seedlingCount}</span>
               </div>
               <TrendingUp className="w-5 h-5 text-slate-400 opacity-50 group-hover:opacity-100 transition-opacity" />
             </div>
             <div className="mt-4 pt-3 border-t border-[#E2E8F0] flex justify-between items-center">
-              <span className="text-[10px] font-mono font-bold text-slate-400 uppercase">Clusters</span>
+              <span className="text-xs font-mono font-bold text-slate-400 uppercase">Clusters</span>
               <span className="text-sm font-mono font-bold text-slate-500">{stats.activeClusters}</span>
             </div>
           </div>
@@ -113,7 +113,7 @@ export default async function Home() {
                   <div className="flex gap-4 items-center">
                     <img src={`https://github.com/${featuredRepo.fullName.split('/')[0]}.png`} className="w-14 h-14 rounded-xl bg-slate-100 border border-white shadow-sm" alt="Avatar" />
                     <div>
-                      <p className="text-[10px] font-mono font-bold text-[#F59E0B] uppercase tracking-widest mb-1 flex items-center gap-1">
+                      <p className="text-xs font-mono font-bold text-[#F59E0B] uppercase tracking-widest mb-1 flex items-center gap-1">
                         <Zap className="w-3 h-3" /> {featuredRepo.zone === 'breakout' ? 'BREAKOUT DETECTED' : 'TOP RISING'}
                       </p>
                       <h3 className="text-xl font-bold text-slate-900 leading-tight">{featuredRepo.fullName}</h3>
@@ -122,7 +122,7 @@ export default async function Home() {
                   </div>
                   <div className="text-right">
                     <div className="text-2xl font-mono font-bold text-slate-900">⭐ {featuredRepo.stars.toLocaleString()}</div>
-                    <p className="text-[10px] font-mono font-bold text-slate-400 uppercase">Stars</p>
+                    <p className="text-xs font-mono font-bold text-slate-400 uppercase">Stars</p>
                   </div>
                 </div>
                 <div className="mt-auto pt-4 flex gap-4 items-center relative z-10">
@@ -133,7 +133,7 @@ export default async function Home() {
                   {featuredRepo.language && (
                     <span className="text-xs font-mono text-slate-500 bg-slate-100 px-2 py-0.5 rounded">{featuredRepo.language}</span>
                   )}
-                  <span className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded-md ${
+                  <span className={`text-xs font-mono font-bold px-2 py-0.5 rounded-md ${
                     featuredRepo.zone === 'breakout' ? 'text-[#F59E0B] bg-[#F59E0B]/10' : 'text-[#007AFF] bg-[#007AFF]/10'
                   }`}>
                     {featuredRepo.zone.toUpperCase()}
@@ -142,7 +142,7 @@ export default async function Home() {
                     href={`https://github.com/${featuredRepo.fullName}`}
                     target="_blank"
                     rel="noopener"
-                    className="ml-auto flex items-center gap-1 text-[10px] font-mono font-bold px-3 py-1.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors"
+                    className="ml-auto flex items-center gap-1 text-xs font-mono font-bold px-3 py-1.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors"
                   >
                     VIEW ON GITHUB <ArrowUpRight className="w-3 h-3" />
                   </a>
@@ -156,8 +156,8 @@ export default async function Home() {
           {/* C. Breakout Repos List (4 cols) */}
           <div className="col-span-1 lg:col-span-4 data-card p-0 flex flex-col min-h-[180px] overflow-hidden">
             <div className="px-5 py-3 border-b border-[#E2E8F0] bg-slate-50/50 flex justify-between items-center">
-              <h4 className="text-[10px] font-mono font-bold text-slate-500 uppercase tracking-widest">🔥 Breakout Repos</h4>
-              <span className="text-[10px] font-mono font-bold text-[#F59E0B] bg-[#F59E0B]/10 px-2 py-0.5 rounded-md">{breakoutRepos.length}</span>
+              <h4 className="text-xs font-mono font-bold text-slate-500 uppercase tracking-widest">🔥 Breakout Repos</h4>
+              <span className="text-xs font-mono font-bold text-[#F59E0B] bg-[#F59E0B]/10 px-2 py-0.5 rounded-md">{breakoutRepos.length}</span>
             </div>
             <div className="flex-1 overflow-y-auto custom-scrollbar">
               {breakoutRepos.length > 0 ? breakoutRepos.map((repo, idx) => (
@@ -165,15 +165,15 @@ export default async function Home() {
                   className="p-4 px-5 border-b border-[#E2E8F0] last:border-0 hover:bg-slate-50 transition-colors flex items-center justify-between group/item cursor-pointer block"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="text-[10px] font-mono font-bold text-slate-300 w-4">0{idx + 1}</span>
+                    <span className="text-xs font-mono font-bold text-slate-300 w-4">0{idx + 1}</span>
                     <div>
                       <h5 className="text-sm font-semibold text-slate-900 group-hover/item:text-[#007AFF] transition-colors">{repo.fullName.split('/')[1]}</h5>
-                      <p className="text-[10px] text-slate-500 font-mono mt-0.5">{repo.fullName.split('/')[0]}</p>
+                      <p className="text-xs text-slate-500 font-mono mt-0.5">{repo.fullName.split('/')[0]}</p>
                     </div>
                   </div>
                   <div className="text-right">
                     <div className="text-xs font-mono font-bold text-slate-700">⭐ {repo.stars.toLocaleString()}</div>
-                    {repo.language && <p className="text-[9px] font-mono text-slate-400 mt-0.5">{repo.language}</p>}
+                    {repo.language && <p className="text-xs font-mono text-slate-400 mt-0.5">{repo.language}</p>}
                   </div>
                 </a>
               )) : (
@@ -187,7 +187,7 @@ export default async function Home() {
             <div className="flex justify-between items-center mb-4">
               <div>
                 <h3 className="text-lg font-bold text-slate-900">Zone Distribution</h3>
-                <p className="text-[10px] font-mono font-bold text-slate-400 uppercase mt-1">Repos by lifecycle stage</p>
+                <p className="text-xs font-mono font-bold text-slate-400 uppercase mt-1">Repos by lifecycle stage</p>
               </div>
             </div>
             <div className="flex-1 w-full min-h-[220px]">
@@ -204,7 +204,7 @@ export default async function Home() {
           <div className="col-span-1 lg:col-span-4 data-card p-6 min-h-[340px] flex flex-col">
             <div className="mb-4">
               <h3 className="text-lg font-bold text-slate-900">Top Languages</h3>
-              <p className="text-[10px] font-mono font-bold text-slate-400 uppercase mt-1">Across {repos.length.toLocaleString()} repos</p>
+              <p className="text-xs font-mono font-bold text-slate-400 uppercase mt-1">Across {repos.length.toLocaleString()} repos</p>
             </div>
             <div className="flex-1 w-full min-h-[220px]">
               <TopLanguagesChart data={topLanguages} />
@@ -214,36 +214,36 @@ export default async function Home() {
           {/* F. Top Rising Repos Grid (12 cols) */}
           <div className="col-span-1 lg:col-span-12 data-card p-0 flex flex-col overflow-hidden">
             <div className="px-6 py-4 border-b border-[#E2E8F0] bg-slate-50/50 flex justify-between items-center">
-              <h4 className="text-[10px] font-mono font-bold text-slate-500 uppercase tracking-widest">📈 Top Rising Repos</h4>
-              <span className="text-[10px] font-mono font-bold text-[#007AFF] bg-[#007AFF]/10 px-2 py-0.5 rounded-md">{stats.risingCount.toLocaleString()} total</span>
+              <h4 className="text-xs font-mono font-bold text-slate-500 uppercase tracking-widest">📈 Top Rising Repos</h4>
+              <span className="text-xs font-mono font-bold text-[#007AFF] bg-[#007AFF]/10 px-2 py-0.5 rounded-md">{stats.risingCount.toLocaleString()} total</span>
             </div>
             <div className="p-0 overflow-x-auto">
               <table className="w-full min-w-[700px] border-collapse">
                 <thead>
                   <tr className="text-left border-b border-[#E2E8F0]">
-                    <th className="py-3 px-6 text-[10px] font-mono text-slate-400 uppercase font-bold w-8">#</th>
-                    <th className="py-3 px-3 text-[10px] font-mono text-slate-400 uppercase font-bold">Repository</th>
-                    <th className="py-3 px-3 text-[10px] font-mono text-slate-400 uppercase font-bold">Language</th>
-                    <th className="py-3 px-3 text-[10px] font-mono text-slate-400 uppercase font-bold text-right">Stars</th>
-                    <th className="py-3 px-3 text-[10px] font-mono text-slate-400 uppercase font-bold text-right">Forks</th>
-                    <th className="py-3 px-6 text-[10px] font-mono text-slate-400 uppercase font-bold text-right">Heat</th>
+                    <th className="py-3 px-6 text-xs font-mono text-slate-400 uppercase font-bold w-8">#</th>
+                    <th className="py-3 px-3 text-xs font-mono text-slate-400 uppercase font-bold">Repository</th>
+                    <th className="py-3 px-3 text-xs font-mono text-slate-400 uppercase font-bold">Language</th>
+                    <th className="py-3 px-3 text-xs font-mono text-slate-400 uppercase font-bold text-right">Stars</th>
+                    <th className="py-3 px-3 text-xs font-mono text-slate-400 uppercase font-bold text-right">Forks</th>
+                    <th className="py-3 px-6 text-xs font-mono text-slate-400 uppercase font-bold text-right">Heat</th>
                   </tr>
                 </thead>
                 <tbody className="text-sm font-mono">
                   {topRising.map((repo, i) => (
                     <tr key={repo.id} className="border-b border-[#E2E8F0] hover:bg-slate-50/80 transition-colors">
-                      <td className="py-3 px-6 text-[10px] text-slate-300 font-bold">{String(i + 1).padStart(2, '0')}</td>
+                      <td className="py-3 px-6 text-xs text-slate-300 font-bold">{String(i + 1).padStart(2, '0')}</td>
                       <td className="py-3 px-3">
                         <a href={`https://github.com/${repo.fullName}`} target="_blank" rel="noopener" className="text-[#007AFF] hover:underline font-medium text-xs">
                           {repo.fullName}
                         </a>
-                        <p className="text-[10px] text-slate-400 mt-0.5 line-clamp-1 max-w-xs">{repo.description}</p>
+                        <p className="text-xs text-slate-400 mt-0.5 line-clamp-1 max-w-xs">{repo.description}</p>
                       </td>
                       <td className="py-3 px-3 text-xs text-slate-500">{repo.language || '—'}</td>
                       <td className="py-3 px-3 text-xs text-slate-700 font-bold text-right">{repo.stars.toLocaleString()}</td>
                       <td className="py-3 px-3 text-xs text-slate-500 text-right">{repo.forks.toLocaleString()}</td>
                       <td className="py-3 px-6 text-right">
-                        <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md ${
+                        <span className={`text-xs font-bold px-2 py-0.5 rounded-md ${
                           repo.heatScore >= 0.5 ? 'text-[#F59E0B] bg-[#F59E0B]/10' : 'text-slate-400 bg-slate-100'
                         }`}>
                           {repo.heatScore.toFixed(2)}
@@ -255,7 +255,7 @@ export default async function Home() {
               </table>
             </div>
             <div className="px-6 py-3 border-t border-[#E2E8F0] bg-slate-50 flex items-center justify-between">
-              <span className="text-[10px] font-mono font-bold text-slate-400">Showing top {topRising.length} of {stats.risingCount.toLocaleString()} rising repos</span>
+              <span className="text-xs font-mono font-bold text-slate-400">Showing top {topRising.length} of {stats.risingCount.toLocaleString()} rising repos</span>
             </div>
           </div>
 

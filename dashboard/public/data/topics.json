@@ -1,26 +1,44 @@
 [
   {
+    "topic": "mcp",
+    "repoCount": 173,
+    "risingCount": 166,
+    "breakoutCount": 0,
+    "graduatedCount": 1,
+    "avgVelocity": 0.01,
+    "isCluster": false
+  },
+  {
     "topic": "rag",
     "repoCount": 132,
-    "risingCount": 141,
-    "breakoutCount": 0,
+    "risingCount": 147,
+    "breakoutCount": 1,
     "graduatedCount": 0,
-    "avgVelocity": 0,
+    "avgVelocity": 0.02,
     "isCluster": false
   },
   {
     "topic": "ai-agent",
     "repoCount": 113,
-    "risingCount": 146,
+    "risingCount": 177,
+    "breakoutCount": 2,
+    "graduatedCount": 1,
+    "avgVelocity": 0.04,
+    "isCluster": false
+  },
+  {
+    "topic": "rust",
+    "repoCount": 113,
+    "risingCount": 172,
     "breakoutCount": 0,
     "graduatedCount": 0,
     "avgVelocity": 0,
     "isCluster": false
   },
   {
-    "topic": "rust",
-    "repoCount": 113,
-    "risingCount": 155,
+    "topic": "bun",
+    "repoCount": 108,
+    "risingCount": 101,
     "breakoutCount": 0,
     "graduatedCount": 0,
     "avgVelocity": 0,
@@ -29,7 +47,25 @@
   {
     "topic": "webassembly",
     "repoCount": 104,
-    "risingCount": 103,
+    "risingCount": 105,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "ai-coding",
+    "repoCount": 104,
+    "risingCount": 66,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0.01,
+    "isCluster": false
+  },
+  {
+    "topic": "deno",
+    "repoCount": 101,
+    "risingCount": 95,
     "breakoutCount": 0,
     "graduatedCount": 0,
     "avgVelocity": 0,
@@ -38,28 +74,28 @@
   {
     "topic": "llm",
     "repoCount": 100,
-    "risingCount": 235,
+    "risingCount": 295,
     "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
+    "graduatedCount": 2,
+    "avgVelocity": 0.01,
     "isCluster": false
   },
   {
     "topic": "vector-database",
     "repoCount": 100,
-    "risingCount": 84,
+    "risingCount": 83,
     "breakoutCount": 0,
     "graduatedCount": 0,
-    "avgVelocity": 0,
+    "avgVelocity": 0.01,
     "isCluster": false
   },
   {
     "topic": "zig",
     "repoCount": 100,
-    "risingCount": 99,
-    "breakoutCount": 0,
+    "risingCount": 98,
+    "breakoutCount": 1,
     "graduatedCount": 0,
-    "avgVelocity": 0,
+    "avgVelocity": 0.02,
     "isCluster": false
   },
   {
@@ -68,7 +104,7 @@
     "risingCount": 75,
     "breakoutCount": 0,
     "graduatedCount": 0,
-    "avgVelocity": 0,
+    "avgVelocity": 0.03,
     "isCluster": false
   },
   {
@@ -90,45 +126,9 @@
     "isCluster": false
   },
   {
-    "topic": "bun",
-    "repoCount": 0,
-    "risingCount": 7,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "deno",
-    "repoCount": 0,
-    "risingCount": 4,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "ai-coding",
-    "repoCount": 0,
-    "risingCount": 13,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "mcp",
-    "repoCount": 0,
-    "risingCount": 71,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
     "topic": "opentelemetry",
-    "repoCount": 0,
-    "risingCount": 3,
+    "repoCount": 100,
+    "risingCount": 100,
     "breakoutCount": 0,
     "graduatedCount": 0,
     "avgVelocity": 0,
@@ -137,7 +137,7 @@
   {
     "topic": "sqlite",
     "repoCount": 0,
-    "risingCount": 17,
+    "risingCount": 22,
     "breakoutCount": 0,
     "graduatedCount": 0,
     "avgVelocity": 0,
@@ -146,7 +146,7 @@
   {
     "topic": "turso",
     "repoCount": 0,
-    "risingCount": 0,
+    "risingCount": 2,
     "breakoutCount": 0,
     "graduatedCount": 0,
     "avgVelocity": 0,
@@ -155,7 +155,7 @@
   {
     "topic": "drizzle-orm",
     "repoCount": 0,
-    "risingCount": 0,
+    "risingCount": 2,
     "breakoutCount": 0,
     "graduatedCount": 0,
     "avgVelocity": 0,
@@ -164,7 +164,7 @@
   {
     "topic": "shadcn-ui",
     "repoCount": 0,
-    "risingCount": 1,
+    "risingCount": 6,
     "breakoutCount": 0,
     "graduatedCount": 0,
     "avgVelocity": 0,
@@ -173,14 +173,23 @@
   {
     "topic": "tailwindcss",
     "repoCount": 0,
-    "risingCount": 6,
+    "risingCount": 12,
     "breakoutCount": 0,
     "graduatedCount": 0,
     "avgVelocity": 0,
     "isCluster": false
   },
   {
-    "topic": "mobile",
+    "topic": "webrtc",
+    "repoCount": 0,
+    "risingCount": 4,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0.01,
+    "isCluster": false
+  },
+  {
+    "topic": "dotnetcore",
     "repoCount": 0,
     "risingCount": 3,
     "breakoutCount": 0,
@@ -189,34 +198,16 @@
     "isCluster": false
   },
   {
-    "topic": "awesome-list",
+    "topic": "java",
     "repoCount": 0,
-    "risingCount": 17,
+    "risingCount": 96,
     "breakoutCount": 0,
     "graduatedCount": 0,
     "avgVelocity": 0,
     "isCluster": false
   },
   {
-    "topic": "desktop",
-    "repoCount": 0,
-    "risingCount": 15,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "devops-tools",
-    "repoCount": 0,
-    "risingCount": 3,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "monitoring",
+    "topic": "high-performance",
     "repoCount": 0,
     "risingCount": 6,
     "breakoutCount": 0,
@@ -225,7 +216,7 @@
     "isCluster": false
   },
   {
-    "topic": "chromadb",
+    "topic": "modular",
     "repoCount": 0,
     "risingCount": 4,
     "breakoutCount": 0,
@@ -234,142 +225,16 @@
     "isCluster": false
   },
   {
-    "topic": "notebook",
+    "topic": "image-search",
     "repoCount": 0,
-    "risingCount": 5,
+    "risingCount": 6,
     "breakoutCount": 0,
     "graduatedCount": 0,
-    "avgVelocity": 0,
+    "avgVelocity": 0.01,
     "isCluster": false
   },
   {
-    "topic": "c",
-    "repoCount": 0,
-    "risingCount": 687,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "developer-tools",
-    "repoCount": 0,
-    "risingCount": 28,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "cli",
-    "repoCount": 0,
-    "risingCount": 68,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "assistant",
-    "repoCount": 0,
-    "risingCount": 28,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "compiler",
-    "repoCount": 0,
-    "risingCount": 10,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "macos",
-    "repoCount": 0,
-    "risingCount": 25,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "deep-learning",
-    "repoCount": 0,
-    "risingCount": 14,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "hybrid-search",
-    "repoCount": 0,
-    "risingCount": 8,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "generative-ai",
-    "repoCount": 0,
-    "risingCount": 29,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "language-server",
-    "repoCount": 0,
-    "risingCount": 5,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "middleware",
-    "repoCount": 0,
-    "risingCount": 1,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "task-manager",
-    "repoCount": 0,
-    "risingCount": 1,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "ide",
-    "repoCount": 0,
-    "risingCount": 23,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "performance",
-    "repoCount": 0,
-    "risingCount": 11,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "claude-ai",
+    "topic": "elysia",
     "repoCount": 0,
     "risingCount": 6,
     "breakoutCount": 0,
@@ -378,7 +243,34 @@
     "isCluster": false
   },
   {
-    "topic": "risc-v",
+    "topic": "telegram",
+    "repoCount": 0,
+    "risingCount": 14,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0.04,
+    "isCluster": false
+  },
+  {
+    "topic": "oci",
+    "repoCount": 0,
+    "risingCount": 6,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "milvus",
+    "repoCount": 0,
+    "risingCount": 8,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0.01,
+    "isCluster": false
+  },
+  {
+    "topic": "kubernetes-operator",
     "repoCount": 0,
     "risingCount": 3,
     "breakoutCount": 0,
@@ -387,16 +279,7 @@
     "isCluster": false
   },
   {
-    "topic": "golang",
-    "repoCount": 0,
-    "risingCount": 24,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "powerpc",
+    "topic": "planning",
     "repoCount": 0,
     "risingCount": 3,
     "breakoutCount": 0,
@@ -405,25 +288,43 @@
     "isCluster": false
   },
   {
-    "topic": "powersync",
+    "topic": "playground",
     "repoCount": 0,
-    "risingCount": 2,
+    "risingCount": 4,
     "breakoutCount": 0,
     "graduatedCount": 0,
     "avgVelocity": 0,
     "isCluster": false
   },
   {
-    "topic": "dify",
+    "topic": "programming-language",
     "repoCount": 0,
-    "risingCount": 3,
+    "risingCount": 4,
     "breakoutCount": 0,
     "graduatedCount": 0,
     "avgVelocity": 0,
     "isCluster": false
   },
   {
-    "topic": "neural-network",
+    "topic": "tmux",
+    "repoCount": 0,
+    "risingCount": 4,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0.03,
+    "isCluster": false
+  },
+  {
+    "topic": "dataframe",
+    "repoCount": 0,
+    "risingCount": 4,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "demo",
     "repoCount": 0,
     "risingCount": 5,
     "breakoutCount": 0,
@@ -432,18 +333,117 @@
     "isCluster": false
   },
   {
-    "topic": "vue",
+    "topic": "scheduler",
     "repoCount": 0,
-    "risingCount": 9,
+    "risingCount": 4,
     "breakoutCount": 0,
     "graduatedCount": 0,
     "avgVelocity": 0,
     "isCluster": false
   },
   {
-    "topic": "dns",
+    "topic": "moltbot",
+    "repoCount": 0,
+    "risingCount": 5,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0.05,
+    "isCluster": false
+  },
+  {
+    "topic": "ai-engineering",
+    "repoCount": 0,
+    "risingCount": 3,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "coding-assistant",
+    "repoCount": 0,
+    "risingCount": 12,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0.02,
+    "isCluster": false
+  },
+  {
+    "topic": "aws-lambda",
     "repoCount": 0,
     "risingCount": 2,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "browser",
+    "repoCount": 0,
+    "risingCount": 28,
+    "breakoutCount": 1,
+    "graduatedCount": 1,
+    "avgVelocity": 0.06,
+    "isCluster": false
+  },
+  {
+    "topic": "chatbot",
+    "repoCount": 0,
+    "risingCount": 36,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0.01,
+    "isCluster": false
+  },
+  {
+    "topic": "wysiwyg",
+    "repoCount": 0,
+    "risingCount": 4,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "microservices",
+    "repoCount": 0,
+    "risingCount": 4,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "coze",
+    "repoCount": 0,
+    "risingCount": 3,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "code-generation",
+    "repoCount": 0,
+    "risingCount": 6,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "chatbots",
+    "repoCount": 0,
+    "risingCount": 5,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0.01,
+    "isCluster": false
+  },
+  {
+    "topic": "course",
+    "repoCount": 0,
+    "risingCount": 3,
     "breakoutCount": 0,
     "graduatedCount": 0,
     "avgVelocity": 0,
