@@ -1,10 +1,11 @@
-import { getStats, getRepos, getGraduated } from '@/lib/data';
+import { getStats, getRepos, getGraduated, getReport } from '@/lib/data';
 import { Zap, ArrowUpRight, Star, Activity, TrendingUp, Award } from 'lucide-react';
 import { Sparkline, ZoneDistributionChart, TopLanguagesChart } from '@/components/Charts';
 import RepoLink from '@/components/RepoLink';
+import ScanReportCard from '@/components/ScanReportCard';
 
 export default async function Home() {
-  const [stats, repos, graduated] = await Promise.all([getStats(), getRepos(), getGraduated()]);
+  const [stats, repos, graduated, report] = await Promise.all([getStats(), getRepos(), getGraduated(), getReport()]);
 
   const breakoutRepos = repos.filter(r => r.zone === 'breakout').sort((a, b) => b.heatScore - a.heatScore);
   const risingRepos = repos.filter(r => r.zone === 'rising').sort((a, b) => b.stars - a.stars);
@@ -40,6 +41,13 @@ export default async function Home() {
       <div className="max-w-[1600px] mx-auto p-4 lg:p-8 pb-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 auto-rows-min stagger-in">
           
+          {/* SCAN REPORT — full width */}
+          {report && (
+            <div className="col-span-1 lg:col-span-12">
+              <ScanReportCard report={report} />
+            </div>
+          )}
+
           {/* A. Stats Row — 4 metric cards */}
           <div className="col-span-1 lg:col-span-3 data-card p-6 flex flex-col justify-between min-h-[140px] group hover:border-[#007AFF]/30 transition-colors">
             <div className="flex justify-between items-start">

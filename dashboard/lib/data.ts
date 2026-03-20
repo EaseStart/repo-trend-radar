@@ -130,3 +130,31 @@ export async function getTopicByName(topic: string): Promise<{ topic: TopicData 
   const topicRepos = repos.filter((r) => r.topics?.includes(topic));
   return { topic: t, repos: topicRepos };
 }
+
+// --- Scan Report ---
+
+export interface ScanReport {
+  generatedAt: string;
+  hasPreviousData: boolean;
+  narrative: string;
+  overview: {
+    totalTracked: number;
+    prevTracked: number | null;
+    newCount: number;
+    zoneChangeCount: number;
+    topMoverCount: number;
+    breakoutCount: number;
+    risingCount: number;
+    seedlingCount: number;
+    scanAt: string;
+  };
+  newDiscoveries: { fullName: string; description: string; language: string; stars: number; zone: string }[];
+  zoneChanges: { fullName: string; from: string; to: string; stars: number; prevStars: number }[];
+  topMovers: { fullName: string; starGain: number; stars: number; zone: string; language: string }[];
+  trendingTopics: { topic: string; repoCount: number; risingCount: number; breakoutCount: number; avgVelocity: number }[];
+  topLanguages: { language: string; count: number; pct: number }[];
+}
+
+export async function getReport(): Promise<ScanReport | null> {
+  return readJSON<ScanReport>('report.json');
+}

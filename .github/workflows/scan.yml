@@ -25,11 +25,26 @@ jobs:
         with:
           go-version: '1.23'
 
+      - name: Save previous scan data
+        run: |
+          mkdir -p data/prev
+          cp dashboard/public/data/repos.json data/prev/repos.json 2>/dev/null || true
+
       - name: Build crawler
         run: cd crawler && go build -o ../radar ./cmd/radar
 
       - name: Run full scan
         run: ./radar scan
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: dashboard/package-lock.json
+
+      - name: Generate scan report
+        run: node scripts/generate-report.js
 
       - name: Commit data changes
         run: |
@@ -38,13 +53,6 @@ jobs:
           git add dashboard/public/data/ data/
           git diff --cached --quiet || git commit -m "chore(data): daily scan $(date +%Y-%m-%d)"
           git push
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-          cache: 'npm'
-          cache-dependency-path: dashboard/package-lock.json
 
       - name: Build dashboard
         run: |
