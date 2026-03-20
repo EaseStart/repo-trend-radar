@@ -19,6 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Go
         uses: actions/setup-go@v5
@@ -52,8 +54,12 @@ jobs:
           git config user.email "radar@easestart.dev"
           git add dashboard/public/data/ data/
           git diff --cached --quiet || git commit -m "chore(data): daily scan $(date +%Y-%m-%d)"
-          git pull --rebase origin main
-          git push
+          # Pull latest remote changes and rebase, then push (retry once)
+          for i in 1 2; do
+            git pull --rebase origin main && git push && break
+            echo "Push attempt $i failed, retrying..."
+            sleep 5
+          done
 
       - name: Build dashboard
         run: |
