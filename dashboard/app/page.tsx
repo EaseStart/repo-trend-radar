@@ -1,6 +1,7 @@
 import { getStats, getRepos, getGraduated } from '@/lib/data';
 import { Zap, ArrowUpRight, Star, Activity, TrendingUp, Award } from 'lucide-react';
 import { Sparkline, ZoneDistributionChart, TopLanguagesChart } from '@/components/Charts';
+import RepoLink from '@/components/RepoLink';
 
 export default async function Home() {
   const [stats, repos, graduated] = await Promise.all([getStats(), getRepos(), getGraduated()]);
@@ -137,14 +138,11 @@ export default async function Home() {
                   }`}>
                     {featuredRepo.zone.toUpperCase()}
                   </span>
-                  <a 
-                    href={`https://github.com/${featuredRepo.fullName}`}
-                    target="_blank"
-                    rel="noopener"
+                  <RepoLink fullName={featuredRepo.fullName}
                     className="ml-auto flex items-center gap-1 text-xs font-mono font-bold px-3 py-1.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors"
                   >
-                    VIEW ON GITHUB <ArrowUpRight className="w-3 h-3" />
-                  </a>
+                    VIEW DETAILS <ArrowUpRight className="w-3 h-3" />
+                  </RepoLink>
                 </div>
               </>
             ) : (
@@ -160,7 +158,7 @@ export default async function Home() {
             </div>
             <div className="flex-1 overflow-y-auto custom-scrollbar">
               {breakoutRepos.length > 0 ? breakoutRepos.map((repo, idx) => (
-                <a key={repo.id} href={`https://github.com/${repo.fullName}`} target="_blank" rel="noopener"
+                <RepoLink key={repo.id} fullName={repo.fullName}
                   className="p-4 px-5 border-b border-[#E2E8F0] last:border-0 hover:bg-slate-50 transition-colors flex items-center justify-between group/item cursor-pointer block"
                 >
                   <div className="flex items-center gap-3">
@@ -174,7 +172,7 @@ export default async function Home() {
                     <div className="text-xs font-mono font-bold text-slate-700">⭐ {repo.stars.toLocaleString()}</div>
                     {repo.language && <p className="text-xs font-mono text-slate-400 mt-0.5">{repo.language}</p>}
                   </div>
-                </a>
+                </RepoLink>
               )) : (
                 <div className="p-6 text-center text-sm text-slate-400 font-mono">No breakouts yet</div>
               )}
@@ -233,9 +231,9 @@ export default async function Home() {
                     <tr key={repo.id} className="border-b border-[#E2E8F0] hover:bg-slate-50/80 transition-colors">
                       <td className="py-3 px-6 text-xs text-slate-300 font-bold">{String(i + 1).padStart(2, '0')}</td>
                       <td className="py-3 px-3">
-                        <a href={`https://github.com/${repo.fullName}`} target="_blank" rel="noopener" className="text-[#007AFF] hover:underline font-medium text-xs">
+                        <RepoLink fullName={repo.fullName} className="text-[#007AFF] hover:underline font-medium text-xs">
                           {repo.fullName}
-                        </a>
+                        </RepoLink>
                         <p className="text-xs text-slate-400 mt-0.5 line-clamp-1 max-w-xs">{repo.description}</p>
                       </td>
                       <td className="py-3 px-3 text-xs text-slate-500">{repo.language || '—'}</td>

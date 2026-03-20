@@ -1,5 +1,7 @@
 "use client";
 
+import RepoLink from '@/components/RepoLink';
+
 interface RepoCardProps {
   fullName: string;
   description: string;
@@ -47,14 +49,12 @@ export default function RepoCard({
   return (
     <div className="bg-[var(--bg-card)] border border-[#30363d] rounded-lg p-4 hover:border-[#58a6ff33] transition-colors">
       <div className="flex items-start justify-between mb-2">
-        <a
-          href={`https://github.com/${fullName}`}
-          target="_blank"
-          rel="noopener"
+        <RepoLink
+          fullName={fullName}
           className="text-[var(--accent-blue)] font-medium text-sm hover:underline"
         >
           {fullName}
-        </a>
+        </RepoLink>
         <span
           className="text-xs px-2 py-0.5 rounded-full font-medium"
           style={{ background: `${z.color}22`, color: z.color }}

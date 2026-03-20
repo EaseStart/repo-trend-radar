@@ -1,4 +1,5 @@
 import { getGraduated } from "@/lib/data";
+import RepoLink from "@/components/RepoLink";
 
 export const metadata = { title: "Graduated — Repo Trend Radar" };
 
@@ -22,14 +23,12 @@ export default async function GraduatedPage() {
             {repos.map((r) => (
               <div key={r.id} className="data-card p-5 flex items-center justify-between">
                 <div>
-                  <a
-                    href={`https://github.com/${r.fullName}`}
-                    target="_blank"
-                    rel="noopener"
+                  <RepoLink
+                    fullName={r.fullName}
                     className="text-[#007AFF] font-semibold text-sm hover:underline"
                   >
                     {r.fullName}
-                  </a>
+                  </RepoLink>
                   <p className="text-xs text-slate-500 mt-1 line-clamp-1">{r.description}</p>
                   <div className="flex gap-1.5 mt-2">
                     {r.topics?.slice(0, 4).map((t) => (

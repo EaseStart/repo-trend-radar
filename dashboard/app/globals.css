@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   --font-sans: 'SF Pro Rounded', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
