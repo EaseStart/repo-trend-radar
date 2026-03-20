@@ -118,7 +118,7 @@ type TractionExport struct {
 
 func exportRepos(database *db.Database, dir string) error {
 	var repos []db.Repo
-	err := database.Select(&repos, `SELECT * FROM repos WHERE zone IN ('rising', 'breakout') ORDER BY heat_score DESC`)
+	err := database.Select(&repos, `SELECT * FROM repos WHERE zone != 'graduated' ORDER BY heat_score DESC`)
 	if err != nil {
 		return err
 	}
