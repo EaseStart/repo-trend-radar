@@ -1,5 +1,5 @@
 import { getStats, getRepos, getGraduated, getReport } from '@/lib/data';
-import { Zap, ArrowUpRight, Star, Activity, TrendingUp, Award } from 'lucide-react';
+import { Zap, ArrowUpRight, Star, Activity, TrendingUp, Award, RefreshCw } from 'lucide-react';
 import { Sparkline, ZoneDistributionChart, TopLanguagesChart } from '@/components/Charts';
 import RepoLink from '@/components/RepoLink';
 import ScanReportCard from '@/components/ScanReportCard';
@@ -35,6 +35,15 @@ export default async function Home() {
             Last scan: {stats.lastScanAt || 'Never'}
           </span>
           <div className="w-2 h-2 bg-[#22C55E] rounded-full animate-pulse" />
+          <a
+            href="https://github.com/EaseStart/repo-trend-radar/actions/workflows/scan.yml"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 text-xs font-bold text-white bg-slate-900 px-3 py-1.5 rounded-lg hover:bg-[#007AFF] transition-colors"
+          >
+            <RefreshCw className="w-3 h-3" />
+            Trigger Scan
+          </a>
         </div>
       </header>
 
@@ -288,6 +297,13 @@ export default async function Home() {
           </div>
 
         </div>
+
+        {/* FOOTER */}
+        <footer className="mt-16 pt-6 border-t border-[#E2E8F0] pb-8 flex items-center justify-center">
+          <p className="text-xs text-slate-400 font-mono">
+            Design by <span className="font-bold text-slate-500">EaseUI</span> · Ideation by <span className="font-bold text-slate-500">EaseStart</span> · Developed by <span className="font-bold text-slate-500">Jang, Lucius, Barry</span>
+          </p>
+        </footer>
       </div>
     </>
   );
