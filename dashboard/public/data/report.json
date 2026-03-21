@@ -1,122 +1,100 @@
 {
-  "generatedAt": "2026-03-21T03:39:08.685Z",
+  "generatedAt": "2026-03-21T06:37:12.810Z",
   "hasPreviousData": true,
-  "narrative": "Tracked 1374 repos. 4 new discoveries. Top mover gained +460 stars. \"llm\" leads with 216 rising repos.",
+  "narrative": "Tracked 1374 repos. Top mover gained +129 stars. \"ai\" leads with 286 rising repos.",
   "overview": {
     "totalTracked": 1374,
-    "prevTracked": 1370,
-    "newCount": 4,
+    "prevTracked": 1374,
+    "newCount": 0,
     "zoneChangeCount": 0,
-    "topMoverCount": 234,
+    "topMoverCount": 142,
     "breakoutCount": 0,
     "risingCount": 441,
     "seedlingCount": 18,
-    "scanAt": "2026-03-21 03:39:03"
+    "scanAt": "2026-03-21 06:37:10"
   },
-  "newDiscoveries": [
-    {
-      "fullName": "jackwener/opencli",
-      "description": "Make Any Website & Tool Your CLI. A universal CLI Hub and AI-native runtime. Transform any website, Electron app, or local binary into a standardized command-line interface. Built for AI Agents to discover, learn, and execute tools seamlessly via a unified AGENT.md integration.",
-      "language": "TypeScript",
-      "stars": 3162,
-      "zone": "rising"
-    },
-    {
-      "fullName": "VersusControl/devops-ai-guidelines",
-      "description": "First AI Journey for DevOps - with comprehensive learning paths, practical tips, and enterprise guidelines",
-      "language": "Go",
-      "stars": 885,
-      "zone": "rising"
-    },
-    {
-      "fullName": "skalesapp/skales",
-      "description": "Free AI Desktop Agent for Windows, macOS & Linux - Automate email, calendar, browser, code generation. 13+ AI providers, Ollama, Telegram remote control. No Docker, no terminal. 🦎",
-      "language": "TypeScript",
-      "stars": 428,
-      "zone": "rising"
-    },
-    {
-      "fullName": "Robothy/local-s3",
-      "description": "An Amazon S3 service implementation based on Netty.",
-      "language": "Java",
-      "stars": 63,
-      "zone": "seedling"
-    }
-  ],
+  "newDiscoveries": [],
   "zoneChanges": [],
   "topMovers": [
     {
       "fullName": "opendataloader-project/opendataloader-pdf",
-      "starGain": 460,
-      "stars": 7141,
+      "starGain": 129,
+      "stars": 7270,
       "zone": "rising",
       "language": "Java"
     },
     {
+      "fullName": "jackwener/opencli",
+      "starGain": 72,
+      "stars": 3234,
+      "zone": "rising",
+      "language": "TypeScript"
+    },
+    {
       "fullName": "langchain-ai/open-swe",
-      "starGain": 259,
-      "stars": 7698,
+      "starGain": 53,
+      "stars": 7751,
       "zone": "rising",
       "language": "Python"
     },
     {
       "fullName": "BlockRunAI/ClawRouter",
-      "starGain": 169,
-      "stars": 5755,
+      "starGain": 33,
+      "stars": 5788,
       "zone": "rising",
       "language": "TypeScript"
-    },
-    {
-      "fullName": "NousResearch/hermes-agent",
-      "starGain": 150,
-      "stars": 9496,
-      "zone": "rising",
-      "language": "Python"
     },
     {
       "fullName": "jundot/omlx",
-      "starGain": 60,
-      "stars": 6152,
+      "starGain": 24,
+      "stars": 6176,
       "zone": "rising",
       "language": "Python"
     },
     {
-      "fullName": "CortexReach/memory-lancedb-pro",
-      "starGain": 45,
-      "stars": 3228,
-      "zone": "rising",
-      "language": "TypeScript"
-    },
-    {
-      "fullName": "EvoScientist/EvoScientist",
-      "starGain": 45,
-      "stars": 1334,
-      "zone": "rising",
-      "language": "Python"
-    },
-    {
-      "fullName": "aiming-lab/MetaClaw",
-      "starGain": 40,
-      "stars": 2220,
+      "fullName": "NousResearch/hermes-agent",
+      "starGain": 21,
+      "stars": 9517,
       "zone": "rising",
       "language": "Python"
     },
     {
       "fullName": "hugohe3/ppt-master",
-      "starGain": 38,
-      "stars": 2240,
+      "starGain": 20,
+      "stars": 2260,
       "zone": "rising",
       "language": "Python"
     },
     {
-      "fullName": "superset-sh/superset",
-      "starGain": 32,
-      "stars": 7540,
+      "fullName": "skalesapp/skales",
+      "starGain": 13,
+      "stars": 441,
       "zone": "rising",
       "language": "TypeScript"
+    },
+    {
+      "fullName": "EvoScientist/EvoScientist",
+      "starGain": 12,
+      "stars": 1346,
+      "zone": "rising",
+      "language": "Python"
+    },
+    {
+      "fullName": "EverMind-AI/EverMemOS",
+      "starGain": 11,
+      "stars": 2888,
+      "zone": "rising",
+      "language": "Python"
     }
   ],
   "trendingTopics": [
+    {
+      "topic": "ai",
+      "repoCount": 0,
+      "risingCount": 286,
+      "breakoutCount": 0,
+      "avgVelocity": 0
+    },
     {
       "topic": "llm",
       "repoCount": 100,
@@ -153,13 +131,6 @@
       "avgVelocity": 0
     },
     {
-      "topic": "tool",
-      "repoCount": 0,
-      "risingCount": 61,
-      "breakoutCount": 0,
-      "avgVelocity": 0
-    },
-    {
       "topic": "mcp",
       "repoCount": 0,
       "risingCount": 59,
@@ -167,9 +138,9 @@
       "avgVelocity": 0
     },
     {
-      "topic": "agentic",
+      "topic": "cli",
       "repoCount": 0,
-      "risingCount": 36,
+      "risingCount": 49,
       "breakoutCount": 0,
       "avgVelocity": 0
     }
