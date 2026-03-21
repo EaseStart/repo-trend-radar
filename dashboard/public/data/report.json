@@ -1,146 +1,117 @@
 {
-  "generatedAt": "2026-03-20T14:40:00.215Z",
+  "generatedAt": "2026-03-21T03:39:08.685Z",
   "hasPreviousData": true,
-  "narrative": "Tracked 1370 repos. 5 new discoveries. 3 zone upgrades. Top mover gained +1113 stars. \"llm\" leads with 217 rising repos.",
+  "narrative": "Tracked 1374 repos. 4 new discoveries. Top mover gained +460 stars. \"llm\" leads with 216 rising repos.",
   "overview": {
-    "totalTracked": 1370,
-    "prevTracked": 1365,
-    "newCount": 5,
-    "zoneChangeCount": 3,
-    "topMoverCount": 306,
+    "totalTracked": 1374,
+    "prevTracked": 1370,
+    "newCount": 4,
+    "zoneChangeCount": 0,
+    "topMoverCount": 234,
     "breakoutCount": 0,
-    "risingCount": 442,
-    "seedlingCount": 17,
-    "scanAt": "2026-03-20 14:39:53"
+    "risingCount": 441,
+    "seedlingCount": 18,
+    "scanAt": "2026-03-21 03:39:03"
   },
   "newDiscoveries": [
     {
-      "fullName": "AgentOps-AI/agentops",
-      "description": "Python SDK for AI agent monitoring, LLM cost tracking, benchmarking, and more. Integrates with most LLMs and agent frameworks including CrewAI, Agno, OpenAI Agents SDK, Langchain, Autogen, AG2, and CamelAI",
-      "language": "Python",
-      "stars": 5387,
-      "zone": "rising"
-    },
-    {
-      "fullName": "antinomyhq/forgecode",
-      "description": "AI enabled pair programmer for Claude, GPT, O Series, Grok, Deepseek, Gemini and 300+ models",
-      "language": "Rust",
-      "stars": 5018,
-      "zone": "rising"
-    },
-    {
-      "fullName": "rag-web-ui/rag-web-ui",
-      "description": "RAG Web UI is an intelligent dialogue system based on RAG (Retrieval-Augmented Generation) technology.",
+      "fullName": "jackwener/opencli",
+      "description": "Make Any Website & Tool Your CLI. A universal CLI Hub and AI-native runtime. Transform any website, Electron app, or local binary into a standardized command-line interface. Built for AI Agents to discover, learn, and execute tools seamlessly via a unified AGENT.md integration.",
       "language": "TypeScript",
-      "stars": 2828,
+      "stars": 3162,
       "zone": "rising"
     },
     {
-      "fullName": "doobidoo/mcp-memory-service",
-      "description": "Open-source persistent memory for AI agent pipelines (LangGraph, CrewAI, AutoGen) and Claude. REST API + knowledge graph + autonomous consolidation.",
-      "language": "Python",
-      "stars": 1518,
+      "fullName": "VersusControl/devops-ai-guidelines",
+      "description": "First AI Journey for DevOps - with comprehensive learning paths, practical tips, and enterprise guidelines",
+      "language": "Go",
+      "stars": 885,
       "zone": "rising"
     },
     {
-      "fullName": "ArtificialAnalysis/Stirrup",
-      "description": "The lightweight framework for building agents",
-      "language": "Python",
-      "stars": 329,
+      "fullName": "skalesapp/skales",
+      "description": "Free AI Desktop Agent for Windows, macOS & Linux - Automate email, calendar, browser, code generation. 13+ AI providers, Ollama, Telegram remote control. No Docker, no terminal. 🦎",
+      "language": "TypeScript",
+      "stars": 428,
       "zone": "rising"
+    },
+    {
+      "fullName": "Robothy/local-s3",
+      "description": "An Amazon S3 service implementation based on Netty.",
+      "language": "Java",
+      "stars": 63,
+      "zone": "seedling"
     }
   ],
-  "zoneChanges": [
-    {
-      "fullName": "opendataloader-project/opendataloader-pdf",
-      "from": "breakout",
-      "to": "rising",
-      "stars": 6681,
-      "prevStars": 5568
-    },
-    {
-      "fullName": "EvoScientist/EvoScientist",
-      "from": "breakout",
-      "to": "rising",
-      "stars": 1289,
-      "prevStars": 1163
-    },
-    {
-      "fullName": "MiniMax-AI/OpenRoom",
-      "from": "breakout",
-      "to": "rising",
-      "stars": 522,
-      "prevStars": 472
-    }
-  ],
+  "zoneChanges": [],
   "topMovers": [
     {
       "fullName": "opendataloader-project/opendataloader-pdf",
-      "starGain": 1113,
-      "stars": 6681,
+      "starGain": 460,
+      "stars": 7141,
       "zone": "rising",
       "language": "Java"
     },
     {
       "fullName": "langchain-ai/open-swe",
-      "starGain": 423,
-      "stars": 7439,
+      "starGain": 259,
+      "stars": 7698,
       "zone": "rising",
       "language": "Python"
+    },
+    {
+      "fullName": "BlockRunAI/ClawRouter",
+      "starGain": 169,
+      "stars": 5755,
+      "zone": "rising",
+      "language": "TypeScript"
     },
     {
       "fullName": "NousResearch/hermes-agent",
-      "starGain": 184,
-      "stars": 9346,
-      "zone": "rising",
-      "language": "Python"
-    },
-    {
-      "fullName": "EvoScientist/EvoScientist",
-      "starGain": 126,
-      "stars": 1289,
-      "zone": "rising",
-      "language": "Python"
-    },
-    {
-      "fullName": "aiming-lab/MetaClaw",
-      "starGain": 123,
-      "stars": 2180,
+      "starGain": 150,
+      "stars": 9496,
       "zone": "rising",
       "language": "Python"
     },
     {
       "fullName": "jundot/omlx",
-      "starGain": 117,
-      "stars": 6092,
-      "zone": "rising",
-      "language": "Python"
-    },
-    {
-      "fullName": "alibaba/OpenSandbox",
-      "starGain": 90,
-      "stars": 8863,
-      "zone": "rising",
-      "language": "Python"
-    },
-    {
-      "fullName": "saturndec/waoowaoo",
       "starGain": 60,
-      "stars": 9857,
-      "zone": "rising",
-      "language": "TypeScript"
-    },
-    {
-      "fullName": "EverMind-AI/EverMemOS",
-      "starGain": 57,
-      "stars": 2849,
+      "stars": 6152,
       "zone": "rising",
       "language": "Python"
     },
     {
       "fullName": "CortexReach/memory-lancedb-pro",
-      "starGain": 56,
-      "stars": 3183,
+      "starGain": 45,
+      "stars": 3228,
+      "zone": "rising",
+      "language": "TypeScript"
+    },
+    {
+      "fullName": "EvoScientist/EvoScientist",
+      "starGain": 45,
+      "stars": 1334,
+      "zone": "rising",
+      "language": "Python"
+    },
+    {
+      "fullName": "aiming-lab/MetaClaw",
+      "starGain": 40,
+      "stars": 2220,
+      "zone": "rising",
+      "language": "Python"
+    },
+    {
+      "fullName": "hugohe3/ppt-master",
+      "starGain": 38,
+      "stars": 2240,
+      "zone": "rising",
+      "language": "Python"
+    },
+    {
+      "fullName": "superset-sh/superset",
+      "starGain": 32,
+      "stars": 7540,
       "zone": "rising",
       "language": "TypeScript"
     }
@@ -149,7 +120,7 @@
     {
       "topic": "llm",
       "repoCount": 100,
-      "risingCount": 217,
+      "risingCount": 216,
       "breakoutCount": 0,
       "avgVelocity": 0
     },
@@ -177,28 +148,28 @@
     {
       "topic": "vector-database",
       "repoCount": 100,
-      "risingCount": 83,
+      "risingCount": 82,
+      "breakoutCount": 0,
+      "avgVelocity": 0
+    },
+    {
+      "topic": "tool",
+      "repoCount": 0,
+      "risingCount": 61,
       "breakoutCount": 0,
       "avgVelocity": 0
     },
     {
       "topic": "mcp",
       "repoCount": 0,
-      "risingCount": 60,
+      "risingCount": 59,
       "breakoutCount": 0,
       "avgVelocity": 0
     },
     {
-      "topic": "openai",
+      "topic": "agentic",
       "repoCount": 0,
-      "risingCount": 57,
-      "breakoutCount": 0,
-      "avgVelocity": 0
-    },
-    {
-      "topic": "retrieval",
-      "repoCount": 0,
-      "risingCount": 40,
+      "risingCount": 36,
       "breakoutCount": 0,
       "avgVelocity": 0
     }
@@ -206,7 +177,7 @@
   "topLanguages": [
     {
       "language": "TypeScript",
-      "count": 341,
+      "count": 343,
       "pct": 25
     },
     {
@@ -221,7 +192,7 @@
     },
     {
       "language": "Go",
-      "count": 129,
+      "count": 130,
       "pct": 9
     },
     {
@@ -241,7 +212,7 @@
     },
     {
       "language": "Java",
-      "count": 30,
+      "count": 31,
       "pct": 2
     }
   ]
