@@ -1,100 +1,116 @@
 {
-  "generatedAt": "2026-03-21T06:37:12.810Z",
+  "generatedAt": "2026-03-22T06:44:49.395Z",
   "hasPreviousData": true,
-  "narrative": "Tracked 1374 repos. Top mover gained +129 stars. \"ai\" leads with 286 rising repos.",
+  "narrative": "Tracked 1376 repos. 2 new discoveries. 1 zone upgrades. Top mover gained +751 stars. \"llm\" leads with 216 rising repos.",
   "overview": {
-    "totalTracked": 1374,
+    "totalTracked": 1376,
     "prevTracked": 1374,
-    "newCount": 0,
-    "zoneChangeCount": 0,
-    "topMoverCount": 142,
+    "newCount": 2,
+    "zoneChangeCount": 1,
+    "topMoverCount": 327,
     "breakoutCount": 0,
-    "risingCount": 441,
-    "seedlingCount": 18,
-    "scanAt": "2026-03-21 06:37:10"
+    "risingCount": 442,
+    "seedlingCount": 17,
+    "scanAt": "2026-03-22 06:44:43"
   },
-  "newDiscoveries": [],
-  "zoneChanges": [],
+  "newDiscoveries": [
+    {
+      "fullName": "raphaelmansuy/edgequake",
+      "description": "High-performance GraphRAG inspired from LightRag written in Rust",
+      "language": "Rust",
+      "stars": 1499,
+      "zone": "rising"
+    },
+    {
+      "fullName": "agentic-box/memora",
+      "description": "Give your AI agents persistent memory.",
+      "language": "Python",
+      "stars": 340,
+      "zone": "rising"
+    }
+  ],
+  "zoneChanges": [
+    {
+      "fullName": "datadrivenconstruction/OpenConstructionEstimate-DDC-CWICR",
+      "from": "seedling",
+      "to": "rising",
+      "stars": 102,
+      "prevStars": 99
+    }
+  ],
   "topMovers": [
     {
       "fullName": "opendataloader-project/opendataloader-pdf",
-      "starGain": 129,
-      "stars": 7270,
+      "starGain": 751,
+      "stars": 8021,
       "zone": "rising",
       "language": "Java"
     },
     {
       "fullName": "jackwener/opencli",
-      "starGain": 72,
-      "stars": 3234,
+      "starGain": 607,
+      "stars": 3841,
       "zone": "rising",
       "language": "TypeScript"
     },
     {
-      "fullName": "langchain-ai/open-swe",
-      "starGain": 53,
-      "stars": 7751,
+      "fullName": "NousResearch/hermes-agent",
+      "starGain": 335,
+      "stars": 9852,
+      "zone": "rising",
+      "language": "Python"
+    },
+    {
+      "fullName": "GetBindu/Bindu",
+      "starGain": 299,
+      "stars": 2095,
       "zone": "rising",
       "language": "Python"
     },
     {
       "fullName": "BlockRunAI/ClawRouter",
-      "starGain": 33,
-      "stars": 5788,
+      "starGain": 274,
+      "stars": 6062,
       "zone": "rising",
       "language": "TypeScript"
+    },
+    {
+      "fullName": "langchain-ai/open-swe",
+      "starGain": 209,
+      "stars": 7960,
+      "zone": "rising",
+      "language": "Python"
     },
     {
       "fullName": "jundot/omlx",
-      "starGain": 24,
-      "stars": 6176,
+      "starGain": 188,
+      "stars": 6364,
       "zone": "rising",
       "language": "Python"
     },
     {
-      "fullName": "NousResearch/hermes-agent",
-      "starGain": 21,
-      "stars": 9517,
-      "zone": "rising",
-      "language": "Python"
-    },
-    {
-      "fullName": "hugohe3/ppt-master",
-      "starGain": 20,
-      "stars": 2260,
-      "zone": "rising",
-      "language": "Python"
-    },
-    {
-      "fullName": "skalesapp/skales",
-      "starGain": 13,
-      "stars": 441,
+      "fullName": "superset-sh/superset",
+      "starGain": 148,
+      "stars": 7695,
       "zone": "rising",
       "language": "TypeScript"
     },
     {
-      "fullName": "EvoScientist/EvoScientist",
-      "starGain": 12,
-      "stars": 1346,
+      "fullName": "plastic-labs/honcho",
+      "starGain": 115,
+      "stars": 805,
       "zone": "rising",
       "language": "Python"
     },
     {
       "fullName": "EverMind-AI/EverMemOS",
-      "starGain": 11,
-      "stars": 2888,
+      "starGain": 104,
+      "stars": 2992,
       "zone": "rising",
       "language": "Python"
     }
   ],
   "trendingTopics": [
-    {
-      "topic": "ai",
-      "repoCount": 0,
-      "risingCount": 286,
-      "breakoutCount": 0,
-      "avgVelocity": 0
-    },
     {
       "topic": "llm",
       "repoCount": 100,
@@ -124,9 +140,16 @@
       "avgVelocity": 0
     },
     {
+      "topic": "vector",
+      "repoCount": 0,
+      "risingCount": 90,
+      "breakoutCount": 0,
+      "avgVelocity": 0
+    },
+    {
       "topic": "vector-database",
       "repoCount": 100,
-      "risingCount": 82,
+      "risingCount": 83,
       "breakoutCount": 0,
       "avgVelocity": 0
     },
@@ -138,9 +161,9 @@
       "avgVelocity": 0
     },
     {
-      "topic": "cli",
+      "topic": "openai",
       "repoCount": 0,
-      "risingCount": 49,
+      "risingCount": 56,
       "breakoutCount": 0,
       "avgVelocity": 0
     }
@@ -153,12 +176,12 @@
     },
     {
       "language": "Python",
-      "count": 238,
+      "count": 239,
       "pct": 17
     },
     {
       "language": "Rust",
-      "count": 182,
+      "count": 183,
       "pct": 13
     },
     {

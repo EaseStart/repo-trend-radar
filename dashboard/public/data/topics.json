@@ -38,7 +38,7 @@
   {
     "topic": "vector-database",
     "repoCount": 100,
-    "risingCount": 82,
+    "risingCount": 83,
     "breakoutCount": 0,
     "graduatedCount": 0,
     "avgVelocity": 0,
@@ -180,45 +180,27 @@
     "isCluster": false
   },
   {
-    "topic": "google-gemini",
+    "topic": "sandbox",
     "repoCount": 0,
-    "risingCount": 3,
+    "risingCount": 6,
     "breakoutCount": 0,
     "graduatedCount": 0,
     "avgVelocity": 0,
     "isCluster": false
   },
   {
-    "topic": "opencode",
+    "topic": "model-context-protocol",
     "repoCount": 0,
-    "risingCount": 3,
+    "risingCount": 7,
     "breakoutCount": 0,
     "graduatedCount": 0,
     "avgVelocity": 0,
     "isCluster": false
   },
   {
-    "topic": "ruby",
+    "topic": "enterprise",
     "repoCount": 0,
-    "risingCount": 5,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "tool-calling",
-    "repoCount": 0,
-    "risingCount": 3,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "dataframe",
-    "repoCount": 0,
-    "risingCount": 4,
+    "risingCount": 7,
     "breakoutCount": 0,
     "graduatedCount": 0,
     "avgVelocity": 0,
@@ -234,69 +216,6 @@
     "isCluster": false
   },
   {
-    "topic": "huggingface",
-    "repoCount": 0,
-    "risingCount": 10,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "chinese",
-    "repoCount": 0,
-    "risingCount": 5,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "time-series",
-    "repoCount": 0,
-    "risingCount": 4,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "embedding",
-    "repoCount": 0,
-    "risingCount": 31,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "graph",
-    "repoCount": 0,
-    "risingCount": 35,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "streaming",
-    "repoCount": 0,
-    "risingCount": 4,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "rag-pipeline",
-    "repoCount": 0,
-    "risingCount": 3,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
     "topic": "claude-cowork",
     "repoCount": 0,
     "risingCount": 3,
@@ -306,7 +225,52 @@
     "isCluster": false
   },
   {
-    "topic": "local-llm",
+    "topic": "presentation",
+    "repoCount": 0,
+    "risingCount": 3,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "natural-language-processing",
+    "repoCount": 0,
+    "risingCount": 3,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "openai",
+    "repoCount": 0,
+    "risingCount": 56,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "docker",
+    "repoCount": 0,
+    "risingCount": 14,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "observability",
+    "repoCount": 0,
+    "risingCount": 6,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "real-time",
     "repoCount": 0,
     "risingCount": 4,
     "breakoutCount": 0,
@@ -315,9 +279,108 @@
     "isCluster": false
   },
   {
-    "topic": "gpt-oss",
+    "topic": "ai-workflow",
+    "repoCount": 0,
+    "risingCount": 4,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "autonomous-agents",
+    "repoCount": 0,
+    "risingCount": 6,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "qwen3",
+    "repoCount": 0,
+    "risingCount": 4,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "llama-index",
     "repoCount": 0,
     "risingCount": 3,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "ai-agents-framework",
+    "repoCount": 0,
+    "risingCount": 7,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "cloud",
+    "repoCount": 0,
+    "risingCount": 14,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "vector",
+    "repoCount": 0,
+    "risingCount": 90,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "vector-search-engine",
+    "repoCount": 0,
+    "risingCount": 4,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "claude-code",
+    "repoCount": 0,
+    "risingCount": 27,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "rag-chatbot",
+    "repoCount": 0,
+    "risingCount": 2,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "linux",
+    "repoCount": 0,
+    "risingCount": 11,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "etl",
+    "repoCount": 0,
+    "risingCount": 6,
     "breakoutCount": 0,
     "graduatedCount": 0,
     "avgVelocity": 0,
@@ -333,52 +396,7 @@
     "isCluster": false
   },
   {
-    "topic": "markdown",
-    "repoCount": 0,
-    "risingCount": 5,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "cli",
-    "repoCount": 0,
-    "risingCount": 49,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "analytics",
-    "repoCount": 0,
-    "risingCount": 5,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "ai",
-    "repoCount": 0,
-    "risingCount": 286,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "java",
-    "repoCount": 0,
-    "risingCount": 18,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "php",
+    "topic": "gpu",
     "repoCount": 0,
     "risingCount": 6,
     "breakoutCount": 0,
@@ -387,43 +405,7 @@
     "isCluster": false
   },
   {
-    "topic": "code-generation",
-    "repoCount": 0,
-    "risingCount": 4,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "networking",
-    "repoCount": 0,
-    "risingCount": 4,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "nodejs",
-    "repoCount": 0,
-    "risingCount": 19,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "knowledge-graph",
-    "repoCount": 0,
-    "risingCount": 13,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "c-sharp",
+    "topic": "game-development",
     "repoCount": 0,
     "risingCount": 3,
     "breakoutCount": 0,
@@ -432,18 +414,36 @@
     "isCluster": false
   },
   {
-    "topic": "streaming-data",
+    "topic": "hacktoberfest",
     "repoCount": 0,
-    "risingCount": 3,
+    "risingCount": 18,
     "breakoutCount": 0,
     "graduatedCount": 0,
     "avgVelocity": 0,
     "isCluster": false
   },
   {
-    "topic": "model-context-protocol",
+    "topic": "local-llm",
     "repoCount": 0,
-    "risingCount": 8,
+    "risingCount": 4,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "documentation",
+    "repoCount": 0,
+    "risingCount": 5,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "semantic-search",
+    "repoCount": 0,
+    "risingCount": 18,
     "breakoutCount": 0,
     "graduatedCount": 0,
     "avgVelocity": 0,
