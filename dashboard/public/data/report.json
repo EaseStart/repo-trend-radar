@@ -1,127 +1,154 @@
 {
-  "generatedAt": "2026-03-22T06:44:49.395Z",
+  "generatedAt": "2026-03-23T07:04:34.115Z",
   "hasPreviousData": true,
-  "narrative": "Tracked 1376 repos. 2 new discoveries. 1 zone upgrades. Top mover gained +751 stars. \"llm\" leads with 216 rising repos.",
+  "narrative": "Tracked 1382 repos. 6 new discoveries. Top mover gained +930 stars. \"ai\" leads with 287 rising repos.",
   "overview": {
-    "totalTracked": 1376,
-    "prevTracked": 1374,
-    "newCount": 2,
-    "zoneChangeCount": 1,
-    "topMoverCount": 327,
+    "totalTracked": 1382,
+    "prevTracked": 1376,
+    "newCount": 6,
+    "zoneChangeCount": 0,
+    "topMoverCount": 311,
     "breakoutCount": 0,
-    "risingCount": 442,
+    "risingCount": 444,
     "seedlingCount": 17,
-    "scanAt": "2026-03-22 06:44:43"
+    "scanAt": "2026-03-23 07:04:29"
   },
   "newDiscoveries": [
     {
-      "fullName": "raphaelmansuy/edgequake",
-      "description": "High-performance GraphRAG inspired from LightRag written in Rust",
-      "language": "Rust",
-      "stars": 1499,
+      "fullName": "microsoft/TaskWeaver",
+      "description": "The first \"code-first\" agent framework for seamlessly planning and executing data analytics tasks. ",
+      "language": "Python",
+      "stars": 6132,
       "zone": "rising"
     },
     {
-      "fullName": "agentic-box/memora",
-      "description": "Give your AI agents persistent memory.",
+      "fullName": "visioncortex/vtracer",
+      "description": "Raster to Vector Graphics Converter",
+      "language": "Rust",
+      "stars": 5662,
+      "zone": "rising"
+    },
+    {
+      "fullName": "lonePatient/awesome-pretrained-chinese-nlp-models",
+      "description": "Awesome Pretrained Chinese NLP Models，高质量中文预训练模型&大模型&多模态模型&大语言模型集合",
       "language": "Python",
-      "stars": 340,
+      "stars": 5539,
+      "zone": "rising"
+    },
+    {
+      "fullName": "alexpasmantier/television",
+      "description": "A very fast, portable and hackable fuzzy finder.",
+      "language": "Rust",
+      "stars": 5085,
+      "zone": "rising"
+    },
+    {
+      "fullName": "nexu-io/nexu",
+      "description": "The simplest desktop client for OpenClaw 🦞 — bridge your Agent to WeChat, Feishu, Slack & Discord in one click. Works with Claude Code, Codex & any LLM. BYOK, local-first, chat from your phone 24/7.",
+      "language": "TypeScript",
+      "stars": 609,
+      "zone": "rising"
+    },
+    {
+      "fullName": "CodePhiliaX/youclaw",
+      "description": "🦞 Your AI Personal Assistant.  An intelligent assistant with memory, skills, and scheduled tasks that truly understands you . Helping you tackle everything in work and life.",
+      "language": "TypeScript",
+      "stars": 374,
       "zone": "rising"
     }
   ],
-  "zoneChanges": [
-    {
-      "fullName": "datadrivenconstruction/OpenConstructionEstimate-DDC-CWICR",
-      "from": "seedling",
-      "to": "rising",
-      "stars": 102,
-      "prevStars": 99
-    }
-  ],
+  "zoneChanges": [],
   "topMovers": [
     {
-      "fullName": "opendataloader-project/opendataloader-pdf",
-      "starGain": 751,
-      "stars": 8021,
-      "zone": "rising",
-      "language": "Java"
-    },
-    {
       "fullName": "jackwener/opencli",
-      "starGain": 607,
-      "stars": 3841,
+      "starGain": 930,
+      "stars": 4771,
       "zone": "rising",
       "language": "TypeScript"
     },
     {
-      "fullName": "NousResearch/hermes-agent",
-      "starGain": 335,
-      "stars": 9852,
+      "fullName": "opendataloader-project/opendataloader-pdf",
+      "starGain": 389,
+      "stars": 8410,
       "zone": "rising",
-      "language": "Python"
+      "language": "Java"
     },
     {
-      "fullName": "GetBindu/Bindu",
-      "starGain": 299,
-      "stars": 2095,
+      "fullName": "kreuzberg-dev/kreuzberg",
+      "starGain": 237,
+      "stars": 7017,
       "zone": "rising",
-      "language": "Python"
+      "language": "Rust"
     },
     {
       "fullName": "BlockRunAI/ClawRouter",
-      "starGain": 274,
-      "stars": 6062,
+      "starGain": 181,
+      "stars": 6243,
       "zone": "rising",
       "language": "TypeScript"
     },
     {
       "fullName": "langchain-ai/open-swe",
-      "starGain": 209,
-      "stars": 7960,
+      "starGain": 156,
+      "stars": 8116,
+      "zone": "rising",
+      "language": "Python"
+    },
+    {
+      "fullName": "aiming-lab/MetaClaw",
+      "starGain": 156,
+      "stars": 2458,
       "zone": "rising",
       "language": "Python"
     },
     {
       "fullName": "jundot/omlx",
-      "starGain": 188,
-      "stars": 6364,
+      "starGain": 150,
+      "stars": 6514,
       "zone": "rising",
       "language": "Python"
     },
     {
-      "fullName": "superset-sh/superset",
-      "starGain": 148,
-      "stars": 7695,
-      "zone": "rising",
-      "language": "TypeScript"
-    },
-    {
-      "fullName": "plastic-labs/honcho",
-      "starGain": 115,
-      "stars": 805,
+      "fullName": "hugohe3/ppt-master",
+      "starGain": 138,
+      "stars": 2492,
       "zone": "rising",
       "language": "Python"
     },
     {
-      "fullName": "EverMind-AI/EverMemOS",
-      "starGain": 104,
-      "stars": 2992,
+      "fullName": "EvoScientist/EvoScientist",
+      "starGain": 127,
+      "stars": 1546,
       "zone": "rising",
       "language": "Python"
+    },
+    {
+      "fullName": "Snailclimb/interview-guide",
+      "starGain": 103,
+      "stars": 1194,
+      "zone": "rising",
+      "language": "Java"
     }
   ],
   "trendingTopics": [
     {
+      "topic": "ai",
+      "repoCount": 0,
+      "risingCount": 287,
+      "breakoutCount": 0,
+      "avgVelocity": 0
+    },
+    {
       "topic": "llm",
       "repoCount": 100,
-      "risingCount": 216,
+      "risingCount": 218,
       "breakoutCount": 0,
       "avgVelocity": 0
     },
     {
       "topic": "ai-agent",
-      "repoCount": 114,
-      "risingCount": 137,
+      "repoCount": 115,
+      "risingCount": 138,
       "breakoutCount": 0,
       "avgVelocity": 0
     },
@@ -140,13 +167,6 @@
       "avgVelocity": 0
     },
     {
-      "topic": "vector",
-      "repoCount": 0,
-      "risingCount": 90,
-      "breakoutCount": 0,
-      "avgVelocity": 0
-    },
-    {
       "topic": "vector-database",
       "repoCount": 100,
       "risingCount": 83,
@@ -161,9 +181,9 @@
       "avgVelocity": 0
     },
     {
-      "topic": "openai",
+      "topic": "go",
       "repoCount": 0,
-      "risingCount": 56,
+      "risingCount": 37,
       "breakoutCount": 0,
       "avgVelocity": 0
     }
@@ -171,17 +191,17 @@
   "topLanguages": [
     {
       "language": "TypeScript",
-      "count": 343,
+      "count": 345,
       "pct": 25
     },
     {
       "language": "Python",
-      "count": 239,
+      "count": 241,
       "pct": 17
     },
     {
       "language": "Rust",
-      "count": 183,
+      "count": 185,
       "pct": 13
     },
     {
