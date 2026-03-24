@@ -1,59 +1,31 @@
 {
-  "generatedAt": "2026-03-23T07:04:34.115Z",
+  "generatedAt": "2026-03-24T02:01:06.253Z",
   "hasPreviousData": true,
-  "narrative": "Tracked 1382 repos. 6 new discoveries. Top mover gained +930 stars. \"ai\" leads with 287 rising repos.",
+  "narrative": "Tracked 1384 repos. 2 new discoveries. Top mover gained +567 stars. \"llm\" leads with 219 rising repos.",
   "overview": {
-    "totalTracked": 1382,
-    "prevTracked": 1376,
-    "newCount": 6,
+    "totalTracked": 1384,
+    "prevTracked": 1382,
+    "newCount": 2,
     "zoneChangeCount": 0,
-    "topMoverCount": 311,
+    "topMoverCount": 320,
     "breakoutCount": 0,
-    "risingCount": 444,
+    "risingCount": 445,
     "seedlingCount": 17,
-    "scanAt": "2026-03-23 07:04:29"
+    "scanAt": "2026-03-24 02:01:03"
   },
   "newDiscoveries": [
     {
-      "fullName": "microsoft/TaskWeaver",
-      "description": "The first \"code-first\" agent framework for seamlessly planning and executing data analytics tasks. ",
-      "language": "Python",
-      "stars": 6132,
+      "fullName": "nilsherzig/LLocalSearch",
+      "description": "LLocalSearch is a completely locally running search aggregator using LLM Agents. The user can ask a question and the system will use a chain of LLMs to find the answer. The user can see the progress of the agents and the final answer. No OpenAI or Google API keys are needed.",
+      "language": "Go",
+      "stars": 5964,
       "zone": "rising"
     },
     {
-      "fullName": "visioncortex/vtracer",
-      "description": "Raster to Vector Graphics Converter",
-      "language": "Rust",
-      "stars": 5662,
-      "zone": "rising"
-    },
-    {
-      "fullName": "lonePatient/awesome-pretrained-chinese-nlp-models",
-      "description": "Awesome Pretrained Chinese NLP Models，高质量中文预训练模型&大模型&多模态模型&大语言模型集合",
-      "language": "Python",
-      "stars": 5539,
-      "zone": "rising"
-    },
-    {
-      "fullName": "alexpasmantier/television",
-      "description": "A very fast, portable and hackable fuzzy finder.",
-      "language": "Rust",
-      "stars": 5085,
-      "zone": "rising"
-    },
-    {
-      "fullName": "nexu-io/nexu",
-      "description": "The simplest desktop client for OpenClaw 🦞 — bridge your Agent to WeChat, Feishu, Slack & Discord in one click. Works with Claude Code, Codex & any LLM. BYOK, local-first, chat from your phone 24/7.",
+      "fullName": "beita6969/ScienceClaw",
+      "description": "🔬🦞 A self-evolving AI research colleague for scientists. 285 skills, zero hallucination, persistent memory.",
       "language": "TypeScript",
-      "stars": 609,
-      "zone": "rising"
-    },
-    {
-      "fullName": "CodePhiliaX/youclaw",
-      "description": "🦞 Your AI Personal Assistant.  An intelligent assistant with memory, skills, and scheduled tasks that truly understands you . Helping you tackle everything in work and life.",
-      "language": "TypeScript",
-      "stars": 374,
+      "stars": 348,
       "zone": "rising"
     }
   ],
@@ -61,87 +33,80 @@
   "topMovers": [
     {
       "fullName": "jackwener/opencli",
-      "starGain": 930,
-      "stars": 4771,
+      "starGain": 567,
+      "stars": 5338,
       "zone": "rising",
       "language": "TypeScript"
     },
     {
       "fullName": "opendataloader-project/opendataloader-pdf",
-      "starGain": 389,
-      "stars": 8410,
+      "starGain": 281,
+      "stars": 8691,
       "zone": "rising",
       "language": "Java"
     },
     {
-      "fullName": "kreuzberg-dev/kreuzberg",
-      "starGain": 237,
-      "stars": 7017,
-      "zone": "rising",
-      "language": "Rust"
-    },
-    {
-      "fullName": "BlockRunAI/ClawRouter",
-      "starGain": 181,
-      "stars": 6243,
+      "fullName": "nexu-io/nexu",
+      "starGain": 196,
+      "stars": 805,
       "zone": "rising",
       "language": "TypeScript"
     },
     {
-      "fullName": "langchain-ai/open-swe",
-      "starGain": 156,
-      "stars": 8116,
+      "fullName": "giancarloerra/SocratiCode",
+      "starGain": 131,
+      "stars": 576,
       "zone": "rising",
-      "language": "Python"
+      "language": "TypeScript"
     },
     {
-      "fullName": "aiming-lab/MetaClaw",
-      "starGain": 156,
-      "stars": 2458,
-      "zone": "rising",
-      "language": "Python"
-    },
-    {
-      "fullName": "jundot/omlx",
-      "starGain": 150,
-      "stars": 6514,
+      "fullName": "EvoScientist/EvoScientist",
+      "starGain": 120,
+      "stars": 1666,
       "zone": "rising",
       "language": "Python"
     },
     {
       "fullName": "hugohe3/ppt-master",
-      "starGain": 138,
-      "stars": 2492,
+      "starGain": 116,
+      "stars": 2608,
       "zone": "rising",
       "language": "Python"
     },
     {
-      "fullName": "EvoScientist/EvoScientist",
-      "starGain": 127,
-      "stars": 1546,
+      "fullName": "jundot/omlx",
+      "starGain": 99,
+      "stars": 6613,
       "zone": "rising",
       "language": "Python"
     },
     {
-      "fullName": "Snailclimb/interview-guide",
-      "starGain": 103,
-      "stars": 1194,
+      "fullName": "plastic-labs/honcho",
+      "starGain": 84,
+      "stars": 966,
       "zone": "rising",
-      "language": "Java"
+      "language": "Python"
+    },
+    {
+      "fullName": "alexpasmantier/television",
+      "starGain": 81,
+      "stars": 5166,
+      "zone": "rising",
+      "language": "Rust"
+    },
+    {
+      "fullName": "alibaba/OpenSandbox",
+      "starGain": 78,
+      "stars": 9153,
+      "zone": "rising",
+      "language": "Python"
     }
   ],
   "trendingTopics": [
     {
-      "topic": "ai",
-      "repoCount": 0,
-      "risingCount": 287,
-      "breakoutCount": 0,
-      "avgVelocity": 0
-    },
-    {
       "topic": "llm",
       "repoCount": 100,
-      "risingCount": 218,
+      "risingCount": 219,
       "breakoutCount": 0,
       "avgVelocity": 0
     },
@@ -154,8 +119,8 @@
     },
     {
       "topic": "rag",
-      "repoCount": 132,
-      "risingCount": 129,
+      "repoCount": 131,
+      "risingCount": 128,
       "breakoutCount": 0,
       "avgVelocity": 0
     },
@@ -163,6 +128,13 @@
       "topic": "rust",
       "repoCount": 113,
       "risingCount": 111,
+      "breakoutCount": 0,
+      "avgVelocity": 0
+    },
+    {
+      "topic": "vector",
+      "repoCount": 0,
+      "risingCount": 90,
       "breakoutCount": 0,
       "avgVelocity": 0
     },
@@ -181,9 +153,9 @@
       "avgVelocity": 0
     },
     {
-      "topic": "go",
+      "topic": "claude",
       "repoCount": 0,
-      "risingCount": 37,
+      "risingCount": 54,
       "breakoutCount": 0,
       "avgVelocity": 0
     }
@@ -191,7 +163,7 @@
   "topLanguages": [
     {
       "language": "TypeScript",
-      "count": 345,
+      "count": 346,
       "pct": 25
     },
     {
@@ -206,7 +178,7 @@
     },
     {
       "language": "Go",
-      "count": 130,
+      "count": 131,
       "pct": 9
     },
     {

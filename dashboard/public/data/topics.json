@@ -1,8 +1,8 @@
 [
   {
     "topic": "rag",
-    "repoCount": 132,
-    "risingCount": 129,
+    "repoCount": 131,
+    "risingCount": 128,
     "breakoutCount": 0,
     "graduatedCount": 0,
     "avgVelocity": 0,
@@ -29,7 +29,7 @@
   {
     "topic": "llm",
     "repoCount": 100,
-    "risingCount": 218,
+    "risingCount": 219,
     "breakoutCount": 0,
     "graduatedCount": 0,
     "avgVelocity": 0,
@@ -180,61 +180,7 @@
     "isCluster": false
   },
   {
-    "topic": "real-time",
-    "repoCount": 0,
-    "risingCount": 4,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "presentation",
-    "repoCount": 0,
-    "risingCount": 3,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "claude-code",
-    "repoCount": 0,
-    "risingCount": 28,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "dart",
-    "repoCount": 0,
-    "risingCount": 3,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "knowledge-base",
-    "repoCount": 0,
-    "risingCount": 4,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "semantic-search",
-    "repoCount": 0,
-    "risingCount": 18,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "etl",
+    "topic": "sandbox",
     "repoCount": 0,
     "risingCount": 6,
     "breakoutCount": 0,
@@ -243,16 +189,7 @@
     "isCluster": false
   },
   {
-    "topic": "nextjs",
-    "repoCount": 0,
-    "risingCount": 6,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "ai-native",
+    "topic": "browser-automation",
     "repoCount": 0,
     "risingCount": 4,
     "breakoutCount": 0,
@@ -261,70 +198,16 @@
     "isCluster": false
   },
   {
-    "topic": "etl-pipeline",
+    "topic": "ai-memory",
     "repoCount": 0,
-    "risingCount": 3,
+    "risingCount": 4,
     "breakoutCount": 0,
     "graduatedCount": 0,
     "avgVelocity": 0,
     "isCluster": false
   },
   {
-    "topic": "containers",
-    "repoCount": 0,
-    "risingCount": 3,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "machine-learning",
-    "repoCount": 0,
-    "risingCount": 30,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "go",
-    "repoCount": 0,
-    "risingCount": 37,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "ai",
-    "repoCount": 0,
-    "risingCount": 287,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "java",
-    "repoCount": 0,
-    "risingCount": 18,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "unstructured-data",
-    "repoCount": 0,
-    "risingCount": 6,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "android",
+    "topic": "arm",
     "repoCount": 0,
     "risingCount": 5,
     "breakoutCount": 0,
@@ -333,7 +216,25 @@
     "isCluster": false
   },
   {
-    "topic": "long-term-memory",
+    "topic": "security",
+    "repoCount": 0,
+    "risingCount": 8,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "agent-orchestration",
+    "repoCount": 0,
+    "risingCount": 3,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "integration",
     "repoCount": 0,
     "risingCount": 7,
     "breakoutCount": 0,
@@ -342,34 +243,7 @@
     "isCluster": false
   },
   {
-    "topic": "production-ready",
-    "repoCount": 0,
-    "risingCount": 3,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "cowork",
-    "repoCount": 0,
-    "risingCount": 4,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "search-engine",
-    "repoCount": 0,
-    "risingCount": 15,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "markdown",
+    "topic": "redis",
     "repoCount": 0,
     "risingCount": 5,
     "breakoutCount": 0,
@@ -378,34 +252,7 @@
     "isCluster": false
   },
   {
-    "topic": "elixir",
-    "repoCount": 0,
-    "risingCount": 3,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "postgresql",
-    "repoCount": 0,
-    "risingCount": 14,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "moltbot",
-    "repoCount": 0,
-    "risingCount": 3,
-    "breakoutCount": 0,
-    "graduatedCount": 0,
-    "avgVelocity": 0,
-    "isCluster": false
-  },
-  {
-    "topic": "llamaindex",
+    "topic": "webui",
     "repoCount": 0,
     "risingCount": 4,
     "breakoutCount": 0,
@@ -414,16 +261,52 @@
     "isCluster": false
   },
   {
-    "topic": "agentic-workflow",
+    "topic": "embeddings",
     "repoCount": 0,
-    "risingCount": 10,
+    "risingCount": 22,
     "breakoutCount": 0,
     "graduatedCount": 0,
     "avgVelocity": 0,
     "isCluster": false
   },
   {
-    "topic": "tauri",
+    "topic": "vector-search-engine",
+    "repoCount": 0,
+    "risingCount": 4,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "rust-lang",
+    "repoCount": 0,
+    "risingCount": 11,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "vector",
+    "repoCount": 0,
+    "risingCount": 90,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "conversational-ai",
+    "repoCount": 0,
+    "risingCount": 3,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "agent-memory",
     "repoCount": 0,
     "risingCount": 5,
     "breakoutCount": 0,
@@ -432,7 +315,25 @@
     "isCluster": false
   },
   {
-    "topic": "multiagent",
+    "topic": "gui",
+    "repoCount": 0,
+    "risingCount": 7,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "claude",
+    "repoCount": 0,
+    "risingCount": 54,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "vite",
     "repoCount": 0,
     "risingCount": 6,
     "breakoutCount": 0,
@@ -441,9 +342,108 @@
     "isCluster": false
   },
   {
-    "topic": "hacktoberfest",
+    "topic": "llm-inference",
     "repoCount": 0,
-    "risingCount": 18,
+    "risingCount": 9,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "ai-tools",
+    "repoCount": 0,
+    "risingCount": 9,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "langchain4j",
+    "repoCount": 0,
+    "risingCount": 2,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "tool-calling",
+    "repoCount": 0,
+    "risingCount": 3,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "faiss",
+    "repoCount": 0,
+    "risingCount": 3,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "operating-system",
+    "repoCount": 0,
+    "risingCount": 4,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "gpt",
+    "repoCount": 0,
+    "risingCount": 48,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "linux",
+    "repoCount": 0,
+    "risingCount": 11,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "knowledge-graph",
+    "repoCount": 0,
+    "risingCount": 14,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "weaviate",
+    "repoCount": 0,
+    "risingCount": 1,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "ruby",
+    "repoCount": 0,
+    "risingCount": 5,
+    "breakoutCount": 0,
+    "graduatedCount": 0,
+    "avgVelocity": 0,
+    "isCluster": false
+  },
+  {
+    "topic": "monitoring",
+    "repoCount": 0,
+    "risingCount": 6,
     "breakoutCount": 0,
     "graduatedCount": 0,
     "avgVelocity": 0,
