@@ -1,103 +1,88 @@
 {
-  "generatedAt": "2026-03-24T02:01:06.253Z",
+  "generatedAt": "2026-03-24T06:59:38.335Z",
   "hasPreviousData": true,
-  "narrative": "Tracked 1384 repos. 2 new discoveries. Top mover gained +567 stars. \"llm\" leads with 219 rising repos.",
+  "narrative": "Tracked 1384 repos. Top mover gained +350 stars. \"llm\" leads with 219 rising repos.",
   "overview": {
     "totalTracked": 1384,
-    "prevTracked": 1382,
-    "newCount": 2,
+    "prevTracked": 1384,
+    "newCount": 0,
     "zoneChangeCount": 0,
-    "topMoverCount": 320,
+    "topMoverCount": 222,
     "breakoutCount": 0,
     "risingCount": 445,
     "seedlingCount": 17,
-    "scanAt": "2026-03-24 02:01:03"
+    "scanAt": "2026-03-24 06:59:32"
   },
-  "newDiscoveries": [
-    {
-      "fullName": "nilsherzig/LLocalSearch",
-      "description": "LLocalSearch is a completely locally running search aggregator using LLM Agents. The user can ask a question and the system will use a chain of LLMs to find the answer. The user can see the progress of the agents and the final answer. No OpenAI or Google API keys are needed.",
-      "language": "Go",
-      "stars": 5964,
-      "zone": "rising"
-    },
-    {
-      "fullName": "beita6969/ScienceClaw",
-      "description": "🔬🦞 A self-evolving AI research colleague for scientists. 285 skills, zero hallucination, persistent memory.",
-      "language": "TypeScript",
-      "stars": 348,
-      "zone": "rising"
-    }
-  ],
+  "newDiscoveries": [],
   "zoneChanges": [],
   "topMovers": [
     {
       "fullName": "jackwener/opencli",
-      "starGain": 567,
-      "stars": 5338,
+      "starGain": 350,
+      "stars": 5688,
       "zone": "rising",
       "language": "TypeScript"
     },
     {
       "fullName": "opendataloader-project/opendataloader-pdf",
-      "starGain": 281,
-      "stars": 8691,
+      "starGain": 138,
+      "stars": 8829,
       "zone": "rising",
       "language": "Java"
     },
     {
-      "fullName": "nexu-io/nexu",
-      "starGain": 196,
-      "stars": 805,
+      "fullName": "CodePhiliaX/youclaw",
+      "starGain": 57,
+      "stars": 473,
       "zone": "rising",
       "language": "TypeScript"
-    },
-    {
-      "fullName": "giancarloerra/SocratiCode",
-      "starGain": 131,
-      "stars": 576,
-      "zone": "rising",
-      "language": "TypeScript"
-    },
-    {
-      "fullName": "EvoScientist/EvoScientist",
-      "starGain": 120,
-      "stars": 1666,
-      "zone": "rising",
-      "language": "Python"
     },
     {
       "fullName": "hugohe3/ppt-master",
-      "starGain": 116,
-      "stars": 2608,
+      "starGain": 50,
+      "stars": 2658,
       "zone": "rising",
       "language": "Python"
     },
     {
       "fullName": "jundot/omlx",
-      "starGain": 99,
-      "stars": 6613,
+      "starGain": 34,
+      "stars": 6647,
       "zone": "rising",
       "language": "Python"
     },
     {
-      "fullName": "plastic-labs/honcho",
-      "starGain": 84,
-      "stars": 966,
+      "fullName": "EvoScientist/EvoScientist",
+      "starGain": 33,
+      "stars": 1699,
       "zone": "rising",
       "language": "Python"
     },
     {
-      "fullName": "alexpasmantier/television",
-      "starGain": 81,
-      "stars": 5166,
+      "fullName": "AlexAnys/awesome-openclaw-usecases-zh",
+      "starGain": 32,
+      "stars": 2968,
       "zone": "rising",
-      "language": "Rust"
+      "language": ""
+    },
+    {
+      "fullName": "giancarloerra/SocratiCode",
+      "starGain": 30,
+      "stars": 606,
+      "zone": "rising",
+      "language": "TypeScript"
+    },
+    {
+      "fullName": "nexu-io/nexu",
+      "starGain": 27,
+      "stars": 832,
+      "zone": "rising",
+      "language": "TypeScript"
     },
     {
       "fullName": "alibaba/OpenSandbox",
-      "starGain": 78,
-      "stars": 9153,
+      "starGain": 26,
+      "stars": 9179,
       "zone": "rising",
       "language": "Python"
     }
@@ -125,16 +110,16 @@
       "avgVelocity": 0
     },
     {
-      "topic": "rust",
-      "repoCount": 113,
-      "risingCount": 111,
+      "topic": "data",
+      "repoCount": 0,
+      "risingCount": 123,
       "breakoutCount": 0,
       "avgVelocity": 0
     },
     {
-      "topic": "vector",
-      "repoCount": 0,
-      "risingCount": 90,
+      "topic": "rust",
+      "repoCount": 113,
+      "risingCount": 111,
       "breakoutCount": 0,
       "avgVelocity": 0
     },
@@ -146,16 +131,16 @@
       "avgVelocity": 0
     },
     {
-      "topic": "mcp",
+      "topic": "search",
       "repoCount": 0,
-      "risingCount": 59,
+      "risingCount": 69,
       "breakoutCount": 0,
       "avgVelocity": 0
     },
     {
-      "topic": "claude",
+      "topic": "mcp",
       "repoCount": 0,
-      "risingCount": 54,
+      "risingCount": 59,
       "breakoutCount": 0,
       "avgVelocity": 0
     }
